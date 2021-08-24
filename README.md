@@ -134,7 +134,3 @@ Docker simplifies and accelerates your workflow, while giving developers the fre
 GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD. Build, test, and deploy your code right from GitHub.
 
 [Go To Documentation](https://docs.github.com/en/actions)
-
-## License
-
-MIT
