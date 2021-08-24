@@ -13,9 +13,7 @@ describe("Main component testing with testing-library", () => {
         const { getByText } = render(<Main />);
 
         getByText("superplate");
-        getByText(
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        );
+        getByText("The frontend boilerplate with superpowers!");
     });
 
     it("renders button successfuly", () => {
