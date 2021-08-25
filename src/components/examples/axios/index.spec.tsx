@@ -1,5 +1,4 @@
 import { AxiosExample } from "./index";
-import "./mocks";
 import { mockResponse } from "./mocks";
 
 import { render, waitFor } from "@test";

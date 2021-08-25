@@ -3,6 +3,7 @@ import React from "react";
 export const TestingLibraryExample: React.FC<{ onClick: () => void }> = ({
     onClick,
 }) => {
+    const borderStyle = "1px solid peachpuff";
     return (
         <div
             style={{
@@ -14,9 +15,7 @@ export const TestingLibraryExample: React.FC<{ onClick: () => void }> = ({
                 fontFamily: "sans-serif",
             }}
         >
-            <header
-                style={{ padding: "1rem", borderBottom: "1px solid peachpuff" }}
-            >
+            <header style={{ padding: "1rem", borderBottom: borderStyle }}>
                 <h2 style={{ margin: 0 }}>Testing Library Test Component</h2>
             </header>
             <main style={{ padding: "0.5rem" }}>
@@ -34,15 +33,13 @@ export const TestingLibraryExample: React.FC<{ onClick: () => void }> = ({
                     ducimus!
                 </p>
             </main>
-            <footer
-                style={{ padding: "1rem", borderTop: "1px solid peachpuff" }}
-            >
+            <footer style={{ padding: "1rem", borderTop: borderStyle }}>
                 <button
                     style={{
                         width: "100%",
                         appearance: "none",
                         padding: "1rem 2rem",
-                        border: "1px solid peachpuff",
+                        border: borderStyle,
                         color: "lightsalmon",
                         fontWeight: 600,
                         background: "none",
