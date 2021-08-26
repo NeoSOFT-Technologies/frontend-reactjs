@@ -12,13 +12,15 @@ describe("Main component testing with testing-library", () => {
     it("renders texts successfuly", () => {
         const { getByText } = render(<Main />);
 
-        getByText("superplate");
-        getByText("The frontend boilerplate with superpowers!");
+        expect(getByText("superplate")).toBeDefined();
+        expect(
+            getByText("The frontend boilerplate with superpowers!"),
+        ).toBeDefined();
     });
 
     it("renders button successfuly", () => {
         const { getByText } = render(<Main />);
 
-        getByText("Docs");
+        expect(getByText("Docs")).toBeDefined();
     });
 });
