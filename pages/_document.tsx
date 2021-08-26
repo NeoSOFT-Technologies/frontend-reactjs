@@ -4,7 +4,7 @@ class CustomDocument extends Document {
     static async getInitialProps(
         ctx: DocumentContext,
     ): Promise<DocumentInitialProps> {
-        const initialProps = await Document.getInitialProps(ctx);
+        const initialProps = await Document.getInitialProps(ctx); //nosonar
 
         return initialProps;
     }

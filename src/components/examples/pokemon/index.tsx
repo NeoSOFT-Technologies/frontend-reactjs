@@ -9,11 +9,9 @@ export default function Pokemon() {
 
     return (
         <div className="App">
-            {error ? (
-                <>Oh no, there was an error</>
-            ) : isLoading ? (
-                <>Loading...</>
-            ) : data ? (
+            {error && <>Oh no, there was an error</>}
+            {!error && isLoading && <>Loading...</>}
+            {!error && !isLoading && data && (
                 <>
                     <h3>{data.species.name}</h3>
                     <img
@@ -21,7 +19,7 @@ export default function Pokemon() {
                         alt={data.species.name}
                     />
                 </>
-            ) : null}
+            )}
         </div>
     );
 }
