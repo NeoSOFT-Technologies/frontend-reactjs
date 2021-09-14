@@ -1,13 +1,13 @@
 import React from "react";
 
 import { Header, Main, Footer, Cards } from "@components";
+import Counter from "@components/examples/counter";
 
 const Home: React.FC = () => {
     return (
-        <div className="d-flex flex-column min-vh-100">
+        <div className="d-flex flex-column min-vh-100 ">
             <Header />
-            <Main />
-            <Cards />
+            <Counter />
             <Footer />
         </div>
     );
