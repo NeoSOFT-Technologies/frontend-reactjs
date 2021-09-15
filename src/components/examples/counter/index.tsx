@@ -12,7 +12,7 @@ export default function Counter() {
     );
 
     return (
-        <div>
+        <div className="justify-content-center text-center">
             <div>
                 <h2>Counter</h2>
                 <button type="button" onClick={() => dispatch(increase())}>
