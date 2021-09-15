@@ -16,17 +16,17 @@
         "@next/bundle-analyzer": "^10.0.5",
         "@reduxjs/toolkit": "^1.6.0",
         "axios": "^0.21.1",
-        "bootstrap": "^5.1.0",
+        "bootstrap": "^4.5.3",
         "next": "^11.1.2",
         "next-compose-plugins": "^2.2.1",
         "next-i18next": "^7.0.1",
         "prettier": "^2.2.1",
         "react": "17.0.2",
-        "react-bootstrap": "^1.6.1",
+        "react-bootstrap": "^1.4.3",
         "react-dom": "17.0.2",
         "react-redux": "^7.2.4",
         "react-use": "^15.3.8",
-        "sass": "1.39.0"
+        "sass": "^1.41.0"
     },
     "devDependencies": {
         "@svgr/cli": "^5.5.0",
