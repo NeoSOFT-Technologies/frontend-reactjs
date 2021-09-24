@@ -4,10 +4,12 @@ on:
     push:
         branches:
             - main
+            - dev
             - master
     pull_request:
         branches:
             - main
+            - dev
             - master
 
 jobs:
@@ -44,3 +46,6 @@ jobs:
 
             - name: Run tests
               run: npm run test
+
+            - name: Run Build
+              run: npm run build
