@@ -4,10 +4,12 @@ on:
     push:
         branches:
             - main
+            - dev
             - master
     pull_request:
         branches:
             - main
+            - dev
             - master
 
 jobs:
@@ -37,10 +39,13 @@ jobs:
                       ${{ runner.os }}-node-
 
             - name: Install dependencies
-              run: npm ci
+              run: npm install
 
             - name: Run lint
               run: npm run lint
 
             - name: Run tests
               run: npm run test
+
+            - name: Run Build
+              run: npm run build
