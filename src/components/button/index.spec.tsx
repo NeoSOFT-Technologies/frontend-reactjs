@@ -18,4 +18,41 @@ describe("Button component testing with testing-library", () => {
 
         expect(mockFn).toHaveBeenCalledTimes(1);
     });
+
+    it("should click a large button", () => {
+        props.size = "large";
+
+        const component = mount(<Button {...props}>Send</Button>);
+        simulate(component, { type: "click" });
+
+        expect(component, "to have class", "clicked");
+    });
+
+    it("should render with a custom text", () => {
+        expect(<Button>Send</Button>, "when mounted", "to have text", "Send");
+    });
+
+    it("show log on click", () => {
+        const app = shallow(<App />);
+        const spy = jest.spyOn(app.instance(), "showlog");
+        app.instance().forceUpdate();
+        app.find("button").simulate("click");
+        expect(spy).toHaveBeenCalled();
+    });
+
+    it("show log on mouse over", () => {
+        const app = shallow(<App />);
+        const spy = jest.spyOn(app.instance(), "showlog");
+        app.instance().forceUpdate();
+        app.find("button").simulate("mouseover");
+        expect(spy).toHaveBeenCalled();
+    });
+
+    it("show log on mouse leave", () => {
+        const app = shallow(<App />);
+        const spy = jest.spyOn(app.instance(), "showlog");
+        app.instance().forceUpdate();
+        app.find("button").simulate("mouseleave");
+        expect(spy).toHaveBeenCalled();
+    });
 });
