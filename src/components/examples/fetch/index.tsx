@@ -1,5 +1,14 @@
 import React, { useEffect, useState } from "react";
 
+interface Data {
+    id: number;
+    setup: string;
+    punchline: string;
+}
+
+interface Bug {
+    message: string;
+}
 /**
  * This component is generated as an example for fetch
  */
@@ -8,9 +17,9 @@ const API_URL =
     "https://official-joke-api.appspot.com/jokes/programming/random";
 
 export const FetchExample = () => {
-    const [error, setError] = useState(null);
+    const [error, setError] = useState<Bug | null>(null);
     const [isLoaded, setIsLoaded] = useState(false);
-    const [data, setData] = useState([]);
+    const [data, setData] = useState<Data[]>([]);
 
     console.log("data: ", data);
     // Note: the empty deps array [] means
