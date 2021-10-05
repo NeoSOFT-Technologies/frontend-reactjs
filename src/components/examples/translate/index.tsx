@@ -1,7 +1,8 @@
 import React from "react";
-import { TFunction } from "next-i18next";
+import { TFunction, withTranslation } from "next-i18next";
 
-import { withTranslation, i18n } from "@i18n";
+import * as i18n from "i18n";
+//import { withTranslation, i1n8 } from "@i18n";
 
 /**
  * This component is generated as en example usage of next-i18next

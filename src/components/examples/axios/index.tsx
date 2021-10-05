@@ -16,10 +16,20 @@ const jokesApi = axios.create({
     baseURL: BASE_API_URL,
 });
 
+interface Joke {
+    id: number;
+    setup: string;
+    punchline: string;
+}
+
+interface Bug {
+    message: string;
+}
+
 export const AxiosExample = () => {
-    const [error, setError] = useState(null);
+    const [error, setError] = useState<Bug | null>(null);
     const [isLoaded, setIsLoaded] = useState(false);
-    const [data, setData] = useState([]);
+    const [data, setData] = useState<Joke[]>([]);
 
     // Note: the empty deps array [] means
     // this useEffect will run once
