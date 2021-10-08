@@ -1,4 +1,5 @@
 # React with Next JS
+
 ## Getting Started
 
 superplate is a Next.js all-in-one project generator. Create your project with the tools you need without spending hours on setting them up.
@@ -140,13 +141,15 @@ GitHub Actions makes it easy to automate all your software workflows, now with w
 NextSeo works by including it on pages where you would like SEO attributes to be added. Once included on the page you pass it a configuration object with the page's SEO properties. This can be dynamically generated at a page level or in some cases your API may return an SEO object.
 
 To make changes in default SEO using this boilerplate:
+
 1. Go to next-seo.config.js
 2. Add / Modify the attributes you want.
 3. As it is implemented using DefaultSEO feature, changes will automatically be implemented.
 4. Check your changes are reflected in the pages.
 
 To add new page and write page-specific SEO using this boilerplate:
-1. Add new module in the src/components section.
+
+1. Add new module in the components section.
 2. Add new page in pages section and import this module in it.
 3. Using NextSEO feature, define your attributes.
 4. Check your changes are reflected in the page you newly created.

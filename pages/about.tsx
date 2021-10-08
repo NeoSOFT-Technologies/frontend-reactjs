@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Header, Footer } from "@components";
-import useLocalStorage from "src/hooks/useLocalStorage";
+import useLocalStorage from "hooks/useLocalStorage";
 
 const About: React.FC = () => {
     const [value, setValue] = useLocalStorage("name", "aatish");
