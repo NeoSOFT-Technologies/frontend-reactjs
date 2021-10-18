@@ -18,7 +18,7 @@
     "dependencies": {
         "@next/bundle-analyzer": "^11.1.2",
         "@reduxjs/toolkit": "^1.6.0",
-        "axios": "^0.21.1",
+        "axios": "^0.23.0",
         "bootstrap": "^4.5.3",
         "next": "^11.1.2",
         "next-compose-plugins": "^2.2.1",
