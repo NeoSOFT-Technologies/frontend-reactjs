@@ -29,7 +29,7 @@
         "react-bootstrap": "^2.1.1",
         "react-dom": "17.0.2",
         "react-redux": "^7.2.4",
-        "react-use": "^15.3.8",
+        "react-use": "^17.3.2",
         "sass": "^1.42.1"
     },
     "devDependencies": {
