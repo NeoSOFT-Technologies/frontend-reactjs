@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { LandingPageState } from "../../types/redux";
-import httpclient from "../../utils/api";
+import { validateUserLoginCredentials } from "../../services/login";
+import { LandingPageState, LoginData } from "../../types/redux";
 import error from "../../utils/error";
 
 const initialState: LandingPageState = {
@@ -9,11 +9,13 @@ const initialState: LandingPageState = {
   error: undefined,
 };
 
-export const getLandingPageDetails = createAsyncThunk(
-  "landing/gerDetails",
-  async () => {
+export const getUserDetails = createAsyncThunk(
+  "login/user",
+  async (credentials: LoginData) => {
+    const { username, password } = credentials;
     try {
-      const response = await httpclient().get("/global/mock-data/landing.json");
+      const response = await validateUserLoginCredentials(username, password);
+      console.log(response);
       return response.data;
     } catch (error_) {
       return error_;
@@ -22,18 +24,18 @@ export const getLandingPageDetails = createAsyncThunk(
 );
 
 const slice = createSlice({
-  name: "landing",
+  name: "user-login",
   initialState,
   reducers: {},
   extraReducers(builder): void {
-    builder.addCase(getLandingPageDetails.pending, (state) => {
+    builder.addCase(getUserDetails.pending, (state) => {
       state.loading = true;
     });
-    builder.addCase(getLandingPageDetails.fulfilled, (state, action) => {
+    builder.addCase(getUserDetails.fulfilled, (state, action) => {
       state.loading = false;
       state.data = action.payload;
     });
-    builder.addCase(getLandingPageDetails.rejected, (state, action) => {
+    builder.addCase(getUserDetails.rejected, (state, action) => {
       state.loading = false;
       // action.payload contains error information
       state.error = error(action.payload);
