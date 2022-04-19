@@ -1,2 +1,15 @@
-node_modules
-__generated__
+
+// .eslintignore
+.idea
+.storybook
+.config
+node_modules/*
+config/*
+public/*
+scripts/*
+src/react-app-env.d.ts
+src/reportWebVitals.ts
+coverage
+public
+wiki
+build

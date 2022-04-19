@@ -1,154 +1,105 @@
-# React with Next JS
-## Getting Started
+# React Redux Typescript Boilerplate
 
-superplate is a Next.js all-in-one project generator. Create your project with the tools you need without spending hours on setting them up.
+Skeleton for React & Redux Apps written in TypeScript (with integrated SASS, ESLint, Prettier, and Husky)
 
-## Available Scripts
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
-### Running the development server.
+### Purpose
 
-```bash
-    npm run dev
+Our main purpose with this Skeleton is to start frontend application with react with redux toolkit and typescript.
+
+Try it!! I am happy to hear your feedback or any kind of new features.
+
+### Common Features
+
+- Quick start
+- Integrated eslint, prettier and husky
+- Integrated Redux Toolkit
+- Integrated sass
+- Based on Typescript Syntax
+- Production Ready Skeleton
+
+### Start the application
+
+- Clone the Application git clone `https://github.com/santoshshinde2012/react-redux-typescript-boilerplate.git`
+- Install the dependencies `npm install`
+- Start the application `npm run dev`
+
+### Running the build
+
+All the different build steps are orchestrated via [npm scripts](https://docs.npmjs.com/misc/scripts).
+Npm scripts basically allow us to call (and chain) terminal commands via npm.
+This is nice because most JavaScript tools have easy to use command line utilities allowing us to not need grunt or gulp to manage our builds.
+If you open `package.json`, you will see a `scripts` section with all the different scripts you can call.
+To call a script, simply run `npm run <script-name>` from the command line.
+You'll notice that npm scripts can call each other which makes it easy to compose complex builds out of simple individual build scripts.
+Below is a list of all the scripts this template has available:
+
+
+| Npm Script | Description  |
+| ------------------------- | ------------------------------------------------------------------------------------------------- |
+| `build`                   | Full build. Runs ALL build tasks |
+| `build:prod`                   | Full production build. Runs ALL build tasks |
+| `start:dev`                   | Run the application in dev mode                                       |
+| `build:css`                   | Build the css for production environment                                         |
+| `lint`                    | Runs ESLint on project files                                                                      |
+| `lint:fix`                    | Runs ESLint on project files and fixed the auto fix issues                                                                     |
+| `format`             | Runs the file formatter                                                              |
+| `test`                    | Runs tests using Jest test runner                                                                 |
+| `test:coverage`              | Runs tests to check code coverage                                                                          |
+
+
+### Project Structure
+
+| Name | Description |
+| ------------------------ | --------------------------------------------------------------------------------------------- |
+| **wiki/**                         | You can add project documentation and insructions file here |
+| **src**                  | Contains your source code that will be compiled to the build dir                               |
+| **src/components/**                | UI Components  |
+| **src/pages/**                       | We can also call this "features" if we break the pages based on what will be served in the browser|
+| **src/resources/**               | Constant Variables such as images and strings  |
+| **src/routes/**               | Routing Configuration|
+| **src/store/**               |  Contains slice and hooks |
+| **src/store/${page-name}/slice.ts               |  Contains slice configuration {state, action and reducers} |
+| **src/store/index.ts               |  Entry point for store configuration|
+| **src/styles/**               | SASS styles |
+| **src/types/**               | Schema or Types |
+| **src/utils/**               | Reusable utlity like api http client |
+| **src**/index.ts        | Entry point to your frontend app                                                               |
+| package.json             | File that contains npm dependencies
+| tsconfig.json            | Config settings for compiling server code written in TypeScript                               |
+| .eslintrc.json                | Config settings for ESLint code style checking                                                |
+| .eslintignore            | Config settings for paths to exclude from linting                                             |
+| prettierrc.json                | Config settings for Prettier code format checking                                                |
+| .prettierignore            | Config settings for paths to exclude from formatting                                             |
+| **.vscode**              | Contains VS Code specific settings                                                            |
+| **.github**              | Contains GitHub settings and configurations, including the GitHub Actions workflows            |
+| **.husky**              | Contains Husky settings and configurations            |
+| **build**                 | Contains the distributable (or output) from your TypeScript build. This is the code you ship  |
+| **node_modules**         | Contains all your npm dependencies                                                            |
+
+### Documentations
+
+
+Below is the basic flow for setting up the store and slice and using them in components. The official documentation can be found [here](https://redux-toolkit.js.org/tutorials/typescript) if you would like more information.
+
+```mermaid
+graph TD;
+  A1[UI]--Main Component connected via Provider-->B1[Create Store and Define Root State and Dispatch Types];
+  A1-->A2[Landing Page Component];
+  B1--configureStore, RootState and AppDispatch-->C1[Define Typed Hooks];
+  C1--useAppDispatch and useAppSelector-->D1[Application Usage];
+  D1--createSlice-->E1[Define Slice State and Action Types]
+  E1--landing-->F1[name]
+  E1--initialState-->G1[State]
+  E1--extraReducers-->H1[reducers]
+  E1-->I1[Actions]
+  I1-->i1[pending]
+  I1-->i2[fulfilled]
+  I1-->i3[rejected]
+  E1-->J1[Middleware]
+  E1-->K1[Enitity Adapter]
+  E1--Add Slice Reducers to the Store-->B1
+  H1-->H2[Export Reducers]
+  H2--Use Typed Hooks in Components-->A2
 ```
-
-### Building for production.
-
-```bash
-    npm run build
-```
-
-### Running the production server.
-
-```bash
-    npm run start
-```
-
-## Learn More
-
-To learn more about **superplate**, please check out the [Documentation](https://github.com/pankod/superplate).
-
-### **React-Bootstrap**
-
-Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit.
-
-[Go To Documentation](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
-
-### **SASS/SCSS**
-
-Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins, functions, and more, all with a fully CSS-compatible syntax.
-
-[Go To Documentation](https://sass-lang.com/documentation)
-
-### **Fetch**
-
-Next.js has a built-in polyfill for the fetch API. You don&#39;t need to worry about using it on either server or client side.
-
-[Go To Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-
-### **Axios**
-
-Promise based HTTP client for the browser and node.js.
-
-[Go To Documentation](https://github.com/axios/axios)
-
-### **SVGR**
-
-Transform SVGs into React components.
-
-[Go To Documentation](https://react-svgr.com/docs/getting-started/)
-
-### **Environment Variables**
-
-Use environment variables in your next.js project for server side, client or both.
-
-[Go To Documentation](https://github.com/vercel/next.js/tree/canary/examples/environment-variables)
-
-### **Reverse Proxy**
-
-Proxying some URLs can be useful when you have a separate API backend development server and you want to send API requests on the same domain.
-
-[Go To Documentation](https://webpack.js.org/configuration/dev-server/#devserverproxy)
-
-### **Bundle Analyzer**
-
-Use webpack-bundle-analyzer in your Next.js project. Visualize size of webpack output files with an interactive zoomable treemap.
-
-[Go To Documentation](https://github.com/vercel/next.js/tree/canary/packages/next-bundle-analyzer)
-
-### **react-use**
-
-A Collection of useful React hooks.
-
-[Go To Documentation](https://github.com/streamich/react-use)
-
-### **React Redux**
-
-Redux helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test.
-
-[Go To Documentation](https://redux.js.org/introduction/getting-started)
-
-### **RTK Query**
-
-RTK Query is a powerful data fetching and caching tool
-
-[Go To Documentation](https://redux-toolkit.js.org/rtk-query/overview)
-
-### **next-i18next**
-
-next-i18next is a plugin for Next.js projects that allows you to get translations up and running quickly and easily, while fully supporting SSR, multiple namespaces with codesplitting, etc.
-
-[Go To Documentation](https://github.com/isaachinman/next-i18next)
-
-### **ESLint**
-
-A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript. Maintain your code quality with ease.
-
-[Go To Documentation](https://eslint.org/docs/user-guide/getting-started)
-
-### **Prettier**
-
-An opinionated code formatter; Supports many languages; Integrates with most editors.
-
-[Go To Documentation](https://prettier.io/docs/en/index.html)
-
-### **lint-staged**
-
-The concept of lint-staged is to run configured linter (or other) tasks on files that are staged in git.
-
-[Go To Documentation](https://github.com/okonet/lint-staged)
-
-### **Testing Library**
-
-The React Testing Library is a very light-weight solution for testing React components. It provides light utility functions on top of react-dom and react-dom/test-utils.
-
-[Go To Documentation](https://testing-library.com/docs/)
-
-### **Docker**
-
-Docker simplifies and accelerates your workflow, while giving developers the freedom to innovate with their choice of tools, application stacks, and deployment environments for each project.
-
-[Go To Documentation](https://www.docker.com/get-started)
-
-### **Github Actions**
-
-GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD. Build, test, and deploy your code right from GitHub.
-
-[Go To Documentation](https://docs.github.com/en/actions)
-
-### **Next SEO**
-
-NextSeo works by including it on pages where you would like SEO attributes to be added. Once included on the page you pass it a configuration object with the page's SEO properties. This can be dynamically generated at a page level or in some cases your API may return an SEO object.
-
-To make changes in default SEO using this boilerplate:
-1. Go to next-seo.config.js
-2. Add / Modify the attributes you want.
-3. As it is implemented using DefaultSEO feature, changes will automatically be implemented.
-4. Check your changes are reflected in the pages.
-
-To add new page and write page-specific SEO using this boilerplate:
-1. Add new module in the src/components section.
-2. Add new page in pages section and import this module in it.
-3. Using NextSEO feature, define your attributes.
-4. Check your changes are reflected in the page you newly created.
-
-[Go To Documentation](https://github.com/garmeeh/next-seo)

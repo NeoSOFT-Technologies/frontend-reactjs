@@ -1,4 +1,7 @@
 node_modules
-__generated__
-.next
-storybook-static
+
+# Ignore artifacts:
+build
+coverage
+public
+wiki
