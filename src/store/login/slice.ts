@@ -1,9 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { validateUserLoginCredentials } from "../../services/login";
-import { LandingPageState, LoginData } from "../../types/redux";
+import { LoginData, LoginPageState } from "../../types/redux";
 import error from "../../utils/error";
-
-const initialState: LandingPageState = {
+interface ILoginDataConditions {
+  username: string;
+  password: string;
+}
+const initialState: LoginPageState = {
   data: undefined,
   loading: false,
   error: undefined,
@@ -11,14 +14,16 @@ const initialState: LandingPageState = {
 
 export const getUserDetails = createAsyncThunk(
   "login/user",
-  async (credentials: LoginData) => {
+  async (credentials: ILoginDataConditions) => {
     const { username, password } = credentials;
     try {
-      const response = await validateUserLoginCredentials(username, password);
-      console.log(response);
-      return response.data;
+      const response = await validateUserLoginCredentials();
+      if (response?.username !== username || response?.password !== password) {
+        throw new Error("Incorrect Credentials");
+      }
+      return response;
     } catch (error_) {
-      return error_;
+      throw new Error(error(error_));
     }
   }
 );
@@ -30,15 +35,16 @@ const slice = createSlice({
   extraReducers(builder): void {
     builder.addCase(getUserDetails.pending, (state) => {
       state.loading = true;
+      state.data = undefined;
+      state.error = undefined;
     });
     builder.addCase(getUserDetails.fulfilled, (state, action) => {
       state.loading = false;
-      state.data = action.payload;
+      state.data = action.payload as LoginData;
     });
     builder.addCase(getUserDetails.rejected, (state, action) => {
       state.loading = false;
-      // action.payload contains error information
-      state.error = error(action.payload);
+      state.error = action.error.message as string;
     });
   },
 });

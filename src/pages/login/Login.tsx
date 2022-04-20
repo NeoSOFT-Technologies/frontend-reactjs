@@ -6,8 +6,16 @@ import PasswordButtons from "../../components/password-field/Password";
 import { regexForEmail, regForPassword, logo } from "../../resources/constants";
 
 import { ToastAlert } from "../../components/toast-alert/toast-alert";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
+import { getUserDetails } from "../../store/login/slice";
+import { RootState } from "../../store";
+import { LoginPageState } from "../../types/redux";
 
 export default function Login() {
+  const dispatch = useAppDispatch();
+  const loginState: LoginPageState = useAppSelector(
+    (state: RootState) => state.login
+  );
   const [formdata, setFormData] = useState({
     email: "",
     password: "",
@@ -44,13 +52,13 @@ export default function Login() {
     }
   };
   useEffect(() => {
-    if (formdata.email !== "" && formdata.password !== "") {
+    if (!loginState.loading && loginState.data && !loginState.error) {
       ToastAlert("Logged In", "success");
-      navigate("/dashboard");
-    } else {
-      ToastAlert("Incorrect Credntials!", "warning");
+      navigate("/landing");
+    } else if (!loginState.loading && !loginState.data && loginState.error) {
+      ToastAlert(`${loginState.error}!!!`, "error");
     }
-  }, []);
+  }, [loginState]);
 
   const validate = () => {
     let valid = false;
@@ -59,9 +67,14 @@ export default function Login() {
 
     return valid;
   };
-  const handleSubmit = async () => {
+  const handleSubmit = async (event: React.MouseEvent) => {
+    event.preventDefault();
     if (validate()) {
-      console.log(validate());
+      const data = {
+        username: formdata.email,
+        password: formdata.password,
+      };
+      dispatch(getUserDetails(data));
     } else {
       ToastAlert("Please fill all the fields", "error");
     }
@@ -95,7 +108,7 @@ export default function Login() {
               <Form.Group className="mb-3">
                 <InputGroup>
                   <Form.Control
-                    type="password"
+                    type={showPassword ? "text" : "password"}
                     name="password"
                     placeholder="Enter password"
                     onChange={handle}
@@ -114,8 +127,8 @@ export default function Login() {
               <div className="mt-3">
                 <Button
                   className="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn"
-                  onClick={() => {
-                    handleSubmit();
+                  onClick={(e) => {
+                    handleSubmit(e);
                   }}
                 >
                   SIGN IN
