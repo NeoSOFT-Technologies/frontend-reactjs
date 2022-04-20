@@ -7,7 +7,6 @@ import "./landing.scss";
 function LandingPage() {
   const navigate = useNavigate();
   const { data, loading, error } = useAppSelector((state) => state.login);
-
   useEffect(() => {
     if (!loading && !error && !data) {
       navigate("/");

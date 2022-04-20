@@ -40,7 +40,7 @@
     "object-curly-spacing": ["error", "always"],
     "camelcase": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/no-explicit-any": 1,
+    "@typescript-eslint/no-explicit-any": 0,
     "@typescript-eslint/no-inferrable-types": [
         "warn",
         {
