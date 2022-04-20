@@ -44,7 +44,7 @@ export default function Login() {
         setFormData({ ...formdata, password: value });
         setError({
           ...error,
-          password: regForPassword.test(value) ? "password is not valid" : "",
+          password: regForPassword.test(value) ? "" : "password is not valid",
         });
         break;
       default:
@@ -96,7 +96,7 @@ export default function Login() {
                   type="email"
                   name="email"
                   placeholder="Enter Email"
-                  onChange={handle}
+                  onChange={(e) => handle(e)}
                   required
                 />
                 {error.email.length > 0 && (
