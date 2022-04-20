@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Form, Button, Alert, InputGroup } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import PasswordButtons from "../../components/password-field/Password";
-
+import Loader from "../../components/loader/Loader";
 import { regexForEmail, regForPassword, logo } from "../../resources/constants";
 
 import { ToastAlert } from "../../components/toast-alert/toast-alert";
@@ -81,72 +81,85 @@ export default function Login() {
   };
 
   return (
-    <div className="d-flex align-items-center auth px-0 mt-3 login">
-      <div className="row w-100 mx-0">
-        <div className="col-lg-6 col-md-8 col-sm-10 mx-auto">
-          <div className="auth-form-light text-left py-5 px-4 px-sm-5">
-            <div className="brand-logo">
-              <img src={logo} alt="logo" />
-            </div>
-            <h2>Hello! let&apos;s get started</h2>
-            <h4 className="font-weight-light">Sign in to continue.</h4>
-            <Form className="pt-3">
-              <Form.Group className="mb-3">
-                <Form.Control
-                  type="email"
-                  name="email"
-                  placeholder="Enter Email"
-                  onChange={handle}
-                  required
-                />
-                {error.email.length > 0 && (
-                  <Alert variant="danger" className="mt-2">
-                    {error.email}
-                  </Alert>
-                )}
-              </Form.Group>
-              <Form.Group className="mb-3">
-                <InputGroup>
-                  <Form.Control
-                    type={showPassword ? "text" : "password"}
-                    name="password"
-                    placeholder="Enter password"
-                    onChange={handle}
-                  />
-                  <PasswordButtons
-                    viewPassword={showPassword}
-                    setViewPassword={setShowpassword}
-                  />
-                </InputGroup>
-                {error.password.length > 0 && (
-                  <Alert variant="danger" className="mt-2">
-                    {error.password}
-                  </Alert>
-                )}
-              </Form.Group>
-              <div className="mt-3">
-                <Button
-                  className="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn"
-                  onClick={(e) => {
-                    handleSubmit(e);
-                  }}
-                >
-                  SIGN IN
-                </Button>
-              </div>
-              <div className="my-2 d-flex justify-content-between align-items-center">
-                <div className="form-check">
-                  <label className="form-check-label text-muted">
-                    <input type="checkbox" className="form-check-input" />
-                    <i className="input-helper"></i>
-                    Keep me signed in
-                  </label>
+    <>
+      {loginState.loading ? (
+        <Loader></Loader>
+      ) : (
+        <div className="d-flex align-items-center auth px-0 mt-3 login">
+          <div className="row w-100 mx-0">
+            <div className="col-lg-6 col-md-8 col-sm-10 mx-auto">
+              <div className="auth-form-light text-left py-5 px-4 px-sm-5">
+                <div className="brand-logo">
+                  <img src={logo} alt="logo" />
                 </div>
+                <h2>Hello! let&apos;s get started</h2>
+                <h4 className="font-weight-light">Sign in to continue.</h4>
+                <Form className="pt-3">
+                  <Form.Group className="mb-3">
+                    <Form.Control
+                      type="email"
+                      data-testid="email-input"
+                      name="email"
+                      placeholder="Enter Email"
+                      onChange={handle}
+                      required
+                    />
+                    {error.email.length > 0 && (
+                      <Alert variant="danger" className="mt-2">
+                        {error.email}
+                      </Alert>
+                    )}
+                  </Form.Group>
+                  <Form.Group className="mb-3">
+                    <InputGroup>
+                      <Form.Control
+                        type={showPassword ? "text" : "password"}
+                        name="password"
+                        data-testid="password-input"
+                        placeholder="Enter password"
+                        onChange={handle}
+                      />
+                      <PasswordButtons
+                        viewPassword={showPassword}
+                        setViewPassword={setShowpassword}
+                      />
+                    </InputGroup>
+                    {error.password.length > 0 && (
+                      <Alert variant="danger" className="mt-2">
+                        {error.password}
+                      </Alert>
+                    )}
+                  </Form.Group>
+                  <div className="mt-3">
+                    <Button
+                      data-testid="signin-button"
+                      className="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn"
+                      onClick={(e) => {
+                        handleSubmit(e);
+                      }}
+                    >
+                      SIGN IN
+                    </Button>
+                  </div>
+                  <div className="my-2 d-flex justify-content-between align-items-center">
+                    <div className="form-check">
+                      <label className="form-check-label text-muted">
+                        <input
+                          type="checkbox"
+                          className="form-check-input"
+                          data-testid="keep-signed-in"
+                        />
+                        <i className="input-helper"></i>
+                        Keep me signed in
+                      </label>
+                    </div>
+                  </div>
+                </Form>
               </div>
-            </Form>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+      )}
+    </>
   );
 }
