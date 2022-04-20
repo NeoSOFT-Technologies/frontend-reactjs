@@ -9,7 +9,7 @@ test("calling the state of login", async () => {
   await store.dispatch(
     getUserDetails({
       username: "deepthi",
-      password: "deepthi@123",
+      password: "",
     })
   );
   if (state.loading === false) {
@@ -27,7 +27,7 @@ test("should give an error", async () => {
   await store.dispatch(
     getUserDetails({
       username: "deepthi",
-      password: "deepthi@123",
+      password: "",
     })
   );
   if (state.loading === false) {

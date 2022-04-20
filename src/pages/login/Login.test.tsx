@@ -7,7 +7,7 @@ import store from "../../store/index";
 
 import Login from "./Login";
 
-it("render without crashing LandingPage", () => {
+it("render without crashing Loginpage", () => {
   render(
     <BrowserRouter>
       <Provider store={store}>
@@ -16,7 +16,7 @@ it("render without crashing LandingPage", () => {
     </BrowserRouter>
   );
 });
-it("render without crashing LandingPage", () => {
+it("render the input fields", () => {
   render(
     <BrowserRouter>
       <Provider store={store}>
@@ -37,7 +37,7 @@ it("render without crashing LandingPage", () => {
   expect(screen.getByTestId("password-input")).toHaveValue("deepthi@123");
 });
 
-it("render without crashing LandingPage", () => {
+it("render the buttons", () => {
   render(
     <BrowserRouter>
       <Provider store={store}>
