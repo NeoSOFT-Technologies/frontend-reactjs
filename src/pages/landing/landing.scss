@@ -1,0 +1,42 @@
+.container {
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  padding-right: 3%;
+  padding-top: 10%;
+  padding-left: 5%;
+  box-sizing: border-box;
+  position: relative;
+}
+.content {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.content .text {
+  position: relative;
+}
+.content .text h1 {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-top: 80px;
+  letter-spacing: 0.1em;
+  font-size: 40px;
+  margin-bottom: 0px;
+  color: rgb(38, 156, 25);
+}
+.content .text span {
+  font-size: 30px;
+}
+.content .text p {
+  width: 100%;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-top: 40px;
+  color: #379942;
+}

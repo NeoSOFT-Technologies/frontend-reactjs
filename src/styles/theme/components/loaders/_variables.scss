@@ -1,0 +1,4 @@
+$square-box-scale: 3;
+$square-size: 30px;
+$square-corner-size: ceil(calc($square-size / $square-box-scale));
+$square-corner-position: ceil(calc($square-corner-size / $square-box-scale));
