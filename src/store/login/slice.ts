@@ -15,10 +15,10 @@ export const getUserDetails = createAsyncThunk(
     const { username, password } = credentials;
     try {
       const response = await validateUserLoginCredentials(username, password);
-      console.log(response);
+      // console.log(response);
       return response.data;
     } catch (error_) {
-      return error_;
+      throw new Error(error(error_));
     }
   }
 );
@@ -30,6 +30,7 @@ const slice = createSlice({
   extraReducers(builder): void {
     builder.addCase(getUserDetails.pending, (state) => {
       state.loading = true;
+      state.error = undefined;
     });
     builder.addCase(getUserDetails.fulfilled, (state, action) => {
       state.loading = false;

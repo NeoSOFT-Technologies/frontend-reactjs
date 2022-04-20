@@ -16,7 +16,7 @@ export const getLandingPageDetails = createAsyncThunk(
       const response = await httpclient().get("/global/mock-data/landing.json");
       return response.data;
     } catch (error_) {
-      return error_;
+      throw new Error(error(error_));
     }
   }
 );

@@ -68,7 +68,7 @@ export default function Login() {
   };
 
   return (
-    <div className="d-flex align-items-center auth px-0 mt-3">
+    <div className="d-flex align-items-center auth px-0 mt-3 login">
       <div className="row w-100 mx-0">
         <div className="col-lg-6 col-md-8 col-sm-10 mx-auto">
           <div className="auth-form-light text-left py-5 px-4 px-sm-5">
@@ -95,8 +95,8 @@ export default function Login() {
               <Form.Group className="mb-3">
                 <InputGroup>
                   <Form.Control
-                    type="password"
                     name="password"
+                    type={showPassword ? "text" : "password"}
                     placeholder="Enter password"
                     onChange={handle}
                   />
