@@ -7,7 +7,7 @@ import "./landing.scss";
 
 function LandingPage() {
   const dispatch = useDispatch();
-  const { data, loading, error } = useAppSelector((state) => state.landing);
+  const { data, loading, error } = useAppSelector((state) => state.login);
 
   useEffect(() => {
     dispatch(getLandingPageDetails());
@@ -21,8 +21,8 @@ function LandingPage() {
         <div className="container">
           <div className="content">
             <div className="text">
-              <h1>Santosh Shinde</h1>
-              <span>Senior Software Enginneer</span>
+              <h1>{data.username}</h1>
+              <span> Software Enginneer</span>
               <p>{data.description}</p>
             </div>
           </div>

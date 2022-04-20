@@ -1,11 +1,11 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 import landingReducer from "./landing/slice";
-import getUserDetailsReducer from "./login/slice";
+import loginReducer from "./login/slice";
 
 const store = configureStore({
   reducer: {
     landing: landingReducer,
-    getUserDetails: getUserDetailsReducer,
+    login: loginReducer,
   },
 });
 
