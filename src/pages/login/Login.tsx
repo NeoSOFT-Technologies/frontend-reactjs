@@ -44,7 +44,7 @@ export default function Login() {
         setFormData({ ...formdata, password: value });
         setError({
           ...error,
-          password: regForPassword.test(value) ? "password is not valid" : "",
+          password: regForPassword.test(value) ? "" : "password is not valid",
         });
         break;
       default:
