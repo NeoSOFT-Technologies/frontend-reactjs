@@ -1,0 +1,89 @@
+{
+  "env": {
+      "browser": true,
+      "jest": true,
+      "es2021": true
+  },
+  "settings": {
+      "react": {
+        "version": "detect"
+      }
+  },
+  "extends": [
+      "plugin:react/recommended",
+      "standard",
+      "plugin:jest-dom/recommended",
+      "plugin:unicorn/recommended",
+      "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+      "ecmaFeatures": {
+          "jsx": true
+      },
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+  },
+  "plugins": [
+      "react",
+      "@typescript-eslint",
+      "unicorn",
+      "jest-dom",
+      "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": ["error",
+      {
+        "endOfLine": "auto"
+      }],
+    "semi": ["error", "always"],
+    "object-curly-spacing": ["error", "always"],
+    "camelcase": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-inferrable-types": [
+        "warn",
+        {
+        "ignoreParameters": true
+        }
+    ],
+    "no-underscore-dangle": "off",
+    "no-shadow": "off",
+    "no-new": 0,
+    "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/no-unused-vars": "warn",
+    "class-methods-use-this": "off",
+    "unicorn/prevent-abbreviations": "off",
+    "unicorn/consistent-destructuring": "off",
+    "unicorn/consistent-function-scoping": "off",
+    "unicorn/filename-case": [
+      "error",
+      {
+        "case": "kebabCase",
+        "ignore": [
+          "setupTests.ts",
+          "serviceWorker.ts",
+          "/*.tsx"
+        ]
+      }
+    ]
+  },
+  "overrides": [
+      {
+          "files": ["**/*.ts", "**/*.tsx"],
+          "plugins": ["@typescript-eslint"],
+          "rules": {
+            // https://stackoverflow.com/questions/63818415/react-was-used-before-it-was-defined
+            "no-use-before-define": "off",
+            "@typescript-eslint/no-use-before-define": ["error"]
+          }
+      },
+      {
+        "files": ["*.test.*"],
+        "rules": {
+          // For tests it can make sense to pass empty functions as mocks.
+          "@typescript-eslint/no-empty-function": "off"
+        }
+      }
+    ]
+}
