@@ -8,104 +8,22 @@ html {
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
-
-@import "./theme/variables";
 @import "../../node_modules/compass-mixins/lib/compass";
 @import "../../node_modules/compass-mixins/lib/animate";
-@import "./theme/fonts";
-@import "./theme/functions";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 /* === Icon fonts === */
+@import "./theme/password";
+@import "./theme/variables";
+
 // @import "../../node_modules/@mdi/font/scss/materialdesignicons.scss";
 
 /* === Template mixins === */
-@import "./theme/mixins/animation";
-@import "./theme/mixins/badges";
 @import "./theme/mixins/buttons";
-@import "./theme/mixins/misc";
-@import "./theme/mixins/color-functions";
-@import "./theme/mixins/cards";
-@import "./theme/mixins/blockqoute";
-@import "./theme/mixins/popovers";
-@import "./theme/mixins/tooltips";
-@import "./theme/mixins/no-ui-slider";
 
 /* === Core Styles === */
-@import "./theme/background";
-@import "./theme/typography";
-@import "./theme/reset";
-@import "./theme/responsive";
-@import "./theme/misc";
-@import "./theme/utilities";
-@import "./theme/demo";
-@import "./theme/spinner";
-@import "./theme/dashboard";
-
-/* === Components === */
-
-@import "./theme/components/widgets";
-@import "./theme/components/forms";
-@import "./theme/components/checkbox-radio";
-@import "./theme/components/icons";
-@import "./theme/components/tables";
-@import "./theme/components/accordions";
-@import "./theme/components/buttons";
-@import "./theme/components/breadcrumbs";
-@import "./theme/components/badges";
-@import "./theme/components/cards";
-@import "./theme/components/preview";
-@import "./theme/components/tooltips";
-@import "./theme/components/user-profile";
-@import "./theme/components/popovers";
-@import "./theme/components/lists";
-@import "./theme/components/bootstrap-progress";
 @import "./theme/components/bootstrap-alerts";
-@import "./theme/components/tabs";
-@import "./theme/components/dropdowns";
-@import "./theme/components/pagination";
-@import "./theme/components/loaders/loaders";
-@import "./theme/components/timeline";
-@import "./theme/components/portfolio";
-@import "./theme/components/pricing-table";
-@import "./theme/components/email/mail-list-container";
-@import "./theme/components/email/mail-sidebar";
-@import "./theme/components/email/message-content";
-@import "./theme/components/todo-list";
-@import "./theme/components/spinner";
-@import "./theme/components/tickets";
-@import "./theme/components/project-list";
-@import "./theme/components/product-tile";
-@import "./theme/components/user-listing";
-@import "./theme/components/landing";
-@import "./theme/components/chats";
-@import "./theme/components/kanban";
-@import "./theme/components/react-table";
-@import "./theme/password";
-@import "./theme/components/landing-screens/auth";
-@import "./theme/components/roleandpermissions.scss";
-
-/* === Plugin Overrides === */
-@import "./theme/components/plugin-overrides/contex-menu";
-@import "./theme/components/plugin-overrides/no-ui-slider";
-@import "./theme/components/plugin-overrides/slick-carousel";
-@import "./theme/components/plugin-overrides/rating";
-@import "./theme/components/plugin-overrides/date-picker";
-@import "./theme/components/plugin-overrides/wizard";
-@import "./theme/components/plugin-overrides/react-bootstrap-table";
-@import "./theme/components/plugin-overrides/sweet-alert";
-@import "./theme/components/plugin-overrides/full-calendar";
-@import "./theme/components/plugin-overrides/react-photo-gallery";
-@import "./theme/components/plugin-overrides/react-tag-autocomplete";
-@import "./theme/components/plugin-overrides/jquery-jvectormap";
-@import "./theme/components/plugin-overrides/react-table";
-
 /* === Layout === */
-@import "./theme/navbar";
-@import "./theme/sidebar";
-@import "./theme/footer";
-@import "./theme/layout";
-@import "./theme/settings-panel";
 
 @import "helpers/index.scss";
 @import "layout/index.scss";

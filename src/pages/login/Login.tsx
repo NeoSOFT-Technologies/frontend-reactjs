@@ -83,7 +83,7 @@ export default function Login() {
   return (
     <>
       {loginState.loading ? (
-        <Loader></Loader>
+        <Loader />
       ) : (
         <div className="d-flex align-items-center auth px-0 mt-3 login">
           <div className="row w-100 mx-0">
