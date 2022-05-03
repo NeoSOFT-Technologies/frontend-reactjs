@@ -9,7 +9,7 @@ export function ToastAlert(
 ) {
   // @ts-ignore
   toast[type](message, {
-    position: position,
+    position,
     autoClose: time,
     hideProgressBar: false,
     closeOnClick: true,
