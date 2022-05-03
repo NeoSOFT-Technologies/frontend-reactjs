@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const defaultBaseUrl =
-  process.env.REACT_APP_API_BASEURL || "http://localhost:5000";
+  process.env.REACT_APP_API_BASEURL || "http://localhost:3000";
 
 // Todo : Make default URL based on Environment ['dev', 'staging', 'test', 'prod']
 
