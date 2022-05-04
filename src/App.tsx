@@ -7,6 +7,7 @@ import Index from "./components/error/index";
 import { useAppSelector } from "./store/hooks";
 import { LoginPageState } from "./types/redux";
 import { RootState } from "./store";
+import Registration from "./pages/registration/Registration";
 function App() {
   const loginState: LoginPageState = useAppSelector(
     (state: RootState) => state.login
@@ -26,6 +27,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
+          <Route path="/registration" element={<Registration />} />
           <Route
             path={"/landing"}
             element={authGuard.protect(<LandingPage />, isAutheticated)}
