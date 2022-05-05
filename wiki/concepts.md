@@ -55,7 +55,7 @@
 
 
 ## 4. Redux Toolkit
-
+The Redux core library is deliberately unopinionated. It lets you decide how you want to handle everything, like store setup, what your state contains, and how you want to build your reducers.
 
 ## 5. React-Router-Dom
 
@@ -183,3 +183,7 @@
 11. "react-toastify": React-Toastify allows you to add notifications to your app with ease.<br/>
    package-link :- https://www.npmjs.com/package/react-toastify<br/>
    docs :- https://github.com/fkhadra/react-toastify#readme, https://fkhadra.github.io/react-toastify/introduction/<br/>
+
+12. "redux-toolkit": Redux Toolkit allows you to Store the data in a centralized store along with providing the middleware required for making APi Calls.<br/>
+package-link :- https://www.npmjs.com/package/@reduxjs/toolkit<br/>
+docs :- https://redux-toolkit.js.org/<br/>
