@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Form, Button, Alert, InputGroup } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import PasswordButtons from "../../components/password-field/Password";
 import Loader from "../../components/loader/Loader";
 import { regexForEmail, regForPassword, logo } from "../../resources/constants";
@@ -141,7 +141,7 @@ export default function Login() {
                       SIGN IN
                     </Button>
                   </div>
-                  <div className="my-2 d-flex justify-content-between align-items-center">
+                  <div className="my-3 d-flex justify-content-between align-items-center">
                     <div className="form-check">
                       <label className="form-check-label text-muted">
                         <input
@@ -153,6 +153,12 @@ export default function Login() {
                         Keep me signed in
                       </label>
                     </div>
+                    <Link
+                      className="text-primary  font-weight-heavy"
+                      to="/registration"
+                    >
+                      Registration Page
+                    </Link>
                   </div>
                 </Form>
               </div>
