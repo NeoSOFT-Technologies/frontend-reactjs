@@ -9,6 +9,7 @@ import {
   regexForUser,
 } from "../../resources/constants";
 import { ToastAlert } from "../../components/toast-alert/toast-alert";
+import { Link } from "react-router-dom";
 export default function Registration() {
   const [formdata, setFormData] = useState({
     username: "",
@@ -57,11 +58,15 @@ export default function Registration() {
   const validate = () => {
     let valid = false;
 
-    valid = !(
-      formdata.username.length === 0 ||
-      formdata.email.length === 0 ||
-      formdata.password.length === 0
-    );
+    valid =
+      !(
+        formdata.username.length === 0 ||
+        formdata.email.length === 0 ||
+        formdata.password.length === 0
+      ) &&
+      error.username === "" &&
+      error.password === "" &&
+      error.email === "";
     console.log(valid);
     return valid;
   };
@@ -71,14 +76,9 @@ export default function Registration() {
     console.log(error, formdata);
     if (validate()) {
       console.log(validate);
-      // const data = {
-      //   username: formdata.email,
-      //   password: formdata.password,
-      // };
-      // dispatch(getUserDetails(data));
       ToastAlert("registrated", "success");
     } else {
-      ToastAlert("Please fill all the fields", "error");
+      ToastAlert("Please fill valid details", "error");
     }
   };
 
@@ -150,6 +150,11 @@ export default function Registration() {
                   </Button>
                 </div>
               </Form>
+              <div className="my-3 d-flex justify-content-end align-items-center">
+                <Link className="text-primary  font-weight-heavy " to="/">
+                  Login Page
+                </Link>
+              </div>
             </div>
           </div>
         </div>
