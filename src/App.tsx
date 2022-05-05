@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import LandingPage from "./pages/landing/LandingPage";
 import Login from "./pages/login/Login";
 import AuthGuard from "./components/auth-guard/AuthGuard";
-import Error401 from "./pages/error-pages/error401";
+import Error401 from "./pages/error-pages/Error401";
 import { useAppSelector } from "./store/hooks";
 import { LoginPageState } from "./types/redux";
 import { RootState } from "./store";
