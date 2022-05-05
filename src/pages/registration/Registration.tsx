@@ -62,15 +62,15 @@ export default function Registration() {
       formdata.email.length === 0 ||
       formdata.password.length === 0
     );
-    console.log(valid);
+    // console.log(valid);
     return valid;
   };
 
   const handleSubmit = async (event: React.MouseEvent) => {
     event.preventDefault();
-    console.log(error, formdata);
+    // console.log(error, formdata);
     if (validate()) {
-      console.log(validate);
+      // console.log(validate);
       // const data = {
       //   username: formdata.email,
       //   password: formdata.password,
@@ -140,7 +140,7 @@ export default function Registration() {
                 </Form.Group>
                 <div className="mt-3">
                   <Button
-                    data-testid="signin-button"
+                    data-testid="signup-button"
                     className="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn"
                     onClick={(e) => {
                       handleSubmit(e);
