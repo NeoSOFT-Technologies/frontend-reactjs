@@ -34,6 +34,7 @@
     "bootstrap": "^4.3.1",
     "compass-mixins": "^0.12.11",
     "react": "^17.0.2",
+    "i18next": "^21.8.0",
     "react-bootstrap": "^2.2.3",
     "react-dom": "^17.0.2",
     "react-i18next": "^11.16.9",
