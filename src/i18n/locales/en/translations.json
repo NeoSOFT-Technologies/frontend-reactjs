@@ -1,15 +1,15 @@
 {
-    "greeting":"Hello! let's get started",
-    "sign-in-clause":"Sign in to continue.",
-    "email-placeholder":"Enter Email",
-    "password-placeholder":"Enter password",
-    "username-placeholder":"Enter Username",
-    "sign-in-button":"SIGN IN",
-    "keep-signed-in":"Keep me signed in",
-    "registration-page-link":"Registration Page",
-    "email-error":"Email is not valid",
-    "password-error":"Password is not valid",
-    "username-error":"Username is not valid",
-    "sign-up-button":"SIGN UP",
-    "login-page-link":"Login Page"
+  "greeting": "Hello! let's get started",
+  "sign-in-clause": "Sign in to continue.",
+  "email-placeholder": "Enter Email",
+  "password-placeholder": "Enter password",
+  "username-placeholder": "Enter Username",
+  "sign-in-button": "SIGN IN",
+  "keep-signed-in": "Keep me signed in",
+  "registration-page-link": "Registration Page",
+  "email-error": "Email is not valid",
+  "password-error": "Password is not valid",
+  "username-error": "Username is not valid",
+  "sign-up-button": "SIGN UP",
+  "login-page-link": "Login Page"
 }

@@ -1,15 +1,15 @@
 {
-    "greeting":"नमस्ते! आएँ शुरू करें",
-    "sign-in-clause":"जारी रखने के लिए साइन इन करें।",
-    "email-placeholder":"ईमेल दर्ज करें",
-    "password-placeholder":"पास वर्ड दर्ज करें",
-    "sign-in-button":"साइन इन करें",
-    "keep-signed-in":"मुझे याद रखें",
-    "registration-page-link":"पंजीकरण पृष्ठ",
-    "email-error":"ईमेल मान्य नहीं है",
-    "password-error":"पासवर्ड मान्य नहीं है",
-    "username-placeholder":"उपयोगकर्ता नाम दर्ज करें",
-    "username-error":"उपयोगकर्ता नाम मान्य नहीं है",
-    "sign-up-button":"साइन अप करें",
-    "login-page-link":"लोग इन वाला पन्ना"
+  "greeting": "नमस्ते! आएँ शुरू करें",
+  "sign-in-clause": "जारी रखने के लिए साइन इन करें।",
+  "email-placeholder": "ईमेल दर्ज करें",
+  "password-placeholder": "पास वर्ड दर्ज करें",
+  "sign-in-button": "साइन इन करें",
+  "keep-signed-in": "मुझे याद रखें",
+  "registration-page-link": "पंजीकरण पृष्ठ",
+  "email-error": "ईमेल मान्य नहीं है",
+  "password-error": "पासवर्ड मान्य नहीं है",
+  "username-placeholder": "उपयोगकर्ता नाम दर्ज करें",
+  "username-error": "उपयोगकर्ता नाम मान्य नहीं है",
+  "sign-up-button": "साइन अप करें",
+  "login-page-link": "लोग इन वाला पन्ना"
 }
