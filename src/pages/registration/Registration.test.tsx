@@ -36,29 +36,17 @@ it("test if input box is present", () => {
   const passwordBox = screen.getByTestId("password-input");
   expect(passwordBox).toBeInTheDocument();
   expect(passwordBox).toHaveAttribute("type", "password");
-});
 
-it("test if input box take input", () => {
-  render(
-    <BrowserRouter>
-      <Provider store={store}>
-        <Registration />
-      </Provider>
-    </BrowserRouter>
-  );
-
-  const nameBox = screen.getByTestId("username-input");
   fireEvent.change(nameBox, { target: { value: "Deepthi" } });
-  expect(screen.getByTestId("username-input")).toHaveValue("Deepthi");
+  expect(nameBox).toHaveValue("Deepthi");
 
-  const emailBox = screen.getByTestId("email-input");
   fireEvent.change(emailBox, { target: { value: "Deepthi@gmail.com" } });
-  expect(screen.getByTestId("email-input")).toHaveValue("Deepthi@gmail.com");
+  expect(emailBox).toHaveValue("Deepthi@gmail.com");
 
-  const passwordBox = screen.getByTestId("password-input");
   fireEvent.change(passwordBox, { target: { value: "Deepthi@1234" } });
-  expect(screen.getByTestId("password-input")).toHaveValue("Deepthi@1234");
+  expect(passwordBox).toHaveValue("Deepthi@1234");
 });
+
 it("if submit button and cancel button renders", () => {
   render(
     <BrowserRouter>

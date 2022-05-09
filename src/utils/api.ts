@@ -26,7 +26,7 @@ class ApiFactoryWrapper {
   };
 
   apiFactory = (header = {}) => {
-    const service = axios.create({
+    return axios.create({
       baseURL: this.baseURL,
       headers: this.buildHeader(header),
       transformResponse: [
@@ -38,8 +38,6 @@ class ApiFactoryWrapper {
         },
       ],
     });
-
-    return service;
   };
 }
 
