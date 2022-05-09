@@ -1,7 +1,7 @@
 {
   "greeting": "Hello! let's get started",
   "sign-in-clause": "Sign in to continue.",
-  "sign-up-clause":"Sign up to continue.",
+  "sign-up-clause": "Sign up to continue.",
   "email-placeholder": "Enter Email",
   "password-placeholder": "Enter password",
   "username-placeholder": "Enter Username",
@@ -13,7 +13,7 @@
   "username-error": "Username is not valid",
   "sign-up-button": "SIGN UP",
   "login-page-link": "Login Page",
-  "error-page":"SORRY!",
-  "error-message":"You're not authorized to access this page.",
+  "error-page": "SORRY!",
+  "error-message": "You're not authorized to access this page.",
   "login-link": "Back to Login"
 }
