@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Button, Form, InputGroup } from "react-bootstrap";
-// import { useNavigate } from "react-router-dom";
 import PasswordButtons from "../../components/password-field/Password";
 import {
   regexForEmail,
@@ -24,7 +23,6 @@ export default function Registration() {
   });
   const [showPassword, setShowpassword] = useState(false);
 
-  // const navigate = useNavigate();
   const handle = (event: any) => {
     const { name, value } = event.target;
     switch (name) {
@@ -67,15 +65,14 @@ export default function Registration() {
       error.username === "" &&
       error.password === "" &&
       error.email === "";
-    // console.log(valid);
+
     return valid;
   };
 
   const handleSubmit = async (event: React.MouseEvent) => {
     event.preventDefault();
-    // console.log(error, formdata);
+
     if (validate()) {
-      // console.log(validate);
       ToastAlert("registrated", "success");
     } else {
       ToastAlert("Please fill valid details", "error");
