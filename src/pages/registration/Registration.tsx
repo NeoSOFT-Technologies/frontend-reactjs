@@ -91,7 +91,7 @@ export default function Registration() {
                 <img src={logo} alt="logo" />
               </div>
               <h2> {t("greeting")}</h2>
-              <h4 className="font-weight-light">Sign up to continue.</h4>
+              <h4 className="font-weight-light">{t("sign-up-clause")}</h4>
               <Form className="pt-3">
                 <Form.Group className="mb-3">
                   <Form.Control
