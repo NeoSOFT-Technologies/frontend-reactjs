@@ -1,6 +1,5 @@
 class AuthGuard {
-  errorComponent: any;
-  constructor(errorComponent: any) {
+  constructor(public errorComponent: any) {
     this.errorComponent = errorComponent;
   }
 

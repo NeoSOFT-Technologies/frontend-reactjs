@@ -1,7 +1,7 @@
-import httpclient from "../utils/api";
+import apiFactory from "../utils/api";
 
 export const validateUserLoginCredentials = async () => {
-  const response = await httpclient().get(
+  const response = await apiFactory().get(
     "/global/mock-data/loginCredentials.json"
   );
   return response.data;
