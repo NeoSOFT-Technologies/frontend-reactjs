@@ -10,8 +10,10 @@ import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { getUserDetails } from "../../store/login/slice";
 import { RootState } from "../../store";
 import { LoginPageState } from "../../types/redux";
+import { useTranslation } from "react-i18next";
 
 export default function Login() {
+  const { t } = useTranslation();
   const dispatch = useAppDispatch();
   const loginState: LoginPageState = useAppSelector(
     (state: RootState) => state.login
@@ -92,21 +94,21 @@ export default function Login() {
                 <div className="brand-logo">
                   <img src={logo} alt="logo" />
                 </div>
-                <h2>Hello! let&apos;s get started</h2>
-                <h4 className="font-weight-light">Sign in to continue.</h4>
+                <h2>{t("greeting")}</h2>
+                <h4 className="font-weight-light">{t("sign-in-clause")}</h4>
                 <Form className="pt-3">
                   <Form.Group className="mb-3">
                     <Form.Control
                       type="email"
                       data-testid="email-input"
                       name="email"
-                      placeholder="Enter Email"
+                      placeholder={t("email-placeholder")}
                       onChange={handle}
                       required
                     />
                     {error.email.length > 0 && (
                       <Alert variant="danger" className="mt-2">
-                        {error.email}
+                        {t("email-error")}
                       </Alert>
                     )}
                   </Form.Group>
@@ -116,7 +118,7 @@ export default function Login() {
                         type={showPassword ? "text" : "password"}
                         name="password"
                         data-testid="password-input"
-                        placeholder="Enter password"
+                        placeholder={t("password-placeholder")}
                         onChange={handle}
                       />
                       <PasswordButtons
@@ -126,7 +128,7 @@ export default function Login() {
                     </InputGroup>
                     {error.password.length > 0 && (
                       <Alert variant="danger" className="mt-2">
-                        {error.password}
+                        {t("email-password")}
                       </Alert>
                     )}
                   </Form.Group>
@@ -138,7 +140,7 @@ export default function Login() {
                         handleSubmit(e);
                       }}
                     >
-                      SIGN IN
+                      {t("sign-in-button")}
                     </Button>
                   </div>
                   <div className="my-3 d-flex justify-content-between align-items-center">
@@ -150,14 +152,14 @@ export default function Login() {
                           data-testid="keep-signed-in"
                         />
                         <i className="input-helper"></i>
-                        Keep me signed in
+                        {t("keep-signed-in")}
                       </label>
                     </div>
                     <Link
                       className="text-primary  font-weight-heavy"
                       to="/registration"
                     >
-                      Registration Page
+                      {t("registration-page-link")}
                     </Link>
                   </div>
                 </Form>

@@ -8,6 +8,7 @@ import { useAppSelector } from "./store/hooks";
 import { LoginPageState } from "./types/redux";
 import { RootState } from "./store";
 import Registration from "./pages/registration/Registration";
+import LanguageChange from "./components/i18n/LanguageChange";
 function App() {
   const loginState: LoginPageState = useAppSelector(
     (state: RootState) => state.login
@@ -36,6 +37,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>
+      <LanguageChange />
     </div>
   );
 }

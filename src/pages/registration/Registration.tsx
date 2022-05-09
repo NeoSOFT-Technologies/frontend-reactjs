@@ -9,7 +9,9 @@ import {
 } from "../../resources/constants";
 import { ToastAlert } from "../../components/toast-alert/toast-alert";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 export default function Registration() {
+  const { t } = useTranslation();
   const [formdata, setFormData] = useState({
     username: "",
     email: "",
@@ -88,20 +90,20 @@ export default function Registration() {
               <div className="brand-logo">
                 <img src={logo} alt="logo" />
               </div>
-              <h2>Hello! let&apos;s get started</h2>
-              <h4 className="font-weight-light">Sign up to continue.</h4>
+              <h2> {t("greeting")}</h2>
+              <h4 className="font-weight-light">{t("sign-up-clause")}</h4>
               <Form className="pt-3">
                 <Form.Group className="mb-3">
                   <Form.Control
                     type="text"
                     data-testid="username-input"
                     name="username"
-                    placeholder="Enter UserName"
+                    placeholder={t("username-placeholder")}
                     onChange={handle}
                     required
                   />
                   {error.username.length > 0 && (
-                    <p className="mt-2 text-danger">{error.username}</p>
+                    <p className="mt-2 text-danger"> {t("username-error")}</p>
                   )}
                 </Form.Group>
                 <Form.Group className="mb-3">
@@ -109,12 +111,12 @@ export default function Registration() {
                     type="email"
                     data-testid="email-input"
                     name="email"
-                    placeholder="Enter Email"
+                    placeholder={t("email-placeholder")}
                     onChange={handle}
                     required
                   />
                   {error.email.length > 0 && (
-                    <p className="mt-2 text-danger">{error.email}</p>
+                    <p className="mt-2 text-danger"> {t("email-error")}</p>
                   )}
                 </Form.Group>
                 <Form.Group className="mb-3">
@@ -123,7 +125,7 @@ export default function Registration() {
                       type={showPassword ? "text" : "password"}
                       name="password"
                       data-testid="password-input"
-                      placeholder="Enter password"
+                      placeholder={t("password-placeholder")}
                       onChange={handle}
                     />
                     <PasswordButtons
@@ -132,7 +134,7 @@ export default function Registration() {
                     />
                   </InputGroup>
                   {error.password.length > 0 && (
-                    <p className="mt-2 text-danger">{error.password}</p>
+                    <p className="mt-2 text-danger">{t("password-error")}</p>
                   )}
                 </Form.Group>
                 <div className="mt-3">
@@ -143,13 +145,13 @@ export default function Registration() {
                       handleSubmit(e);
                     }}
                   >
-                    SIGN UP
+                    {t("sign-up-button")}
                   </Button>
                 </div>
               </Form>
               <div className="my-3 d-flex justify-content-end align-items-center">
                 <Link className="text-primary  font-weight-heavy " to="/">
-                  Login Page
+                  {t("login-page-link")}
                 </Link>
               </div>
             </div>
