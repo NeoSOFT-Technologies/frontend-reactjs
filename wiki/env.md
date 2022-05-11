@@ -1,4 +1,4 @@
-#How to use `.env` files.
+# How to use `.env` files.
 
 
 The variables declared in the environment can be used as if they are declared locally in the JS files.

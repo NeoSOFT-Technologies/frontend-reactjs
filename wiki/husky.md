@@ -1,4 +1,4 @@
-# husky
+# Husky
 Husky improves your commits and by running script or performing some action on the files at the time of  pre and post commit. consider you want to build the code the commit or perfrom lint before pull that is when husky come in picture.
 
 # installation 
