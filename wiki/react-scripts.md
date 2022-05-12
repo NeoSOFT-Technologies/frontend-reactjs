@@ -1,4 +1,4 @@
-### React-scripts	
+# React-scripts	
  It a set of scripts from the create-react-app starter pack. create-react-app helps you kick off projects without configuring, so you do not have to setup your project by yourself. react-scripts start sets up the development environment and starts a server, as well as hot module reloading.
 ### Installation
 **With npm:**

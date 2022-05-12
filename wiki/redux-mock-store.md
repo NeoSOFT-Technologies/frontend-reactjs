@@ -1,5 +1,5 @@
-### redux-mock-store
-###Installation
+# redux-mock-store
+### Installation
 
 
 `$ npm i redux-mock-store`

@@ -1,4 +1,4 @@
-### React-toastify
+# React-toastify
 ### Installation
 **With npm:**
 

@@ -1,8 +1,7 @@
----
-id: Adding localization to React App with React-i18next
-title: How to Add Localization (l10n) to Your React App with react-i18next
-sidebar_label: Adding Localization to React App
----
+# i18next
+
+ i18next is used for adding localization to React App with along with react-i18next module
+
 **What happens when you add localization to a website?**: When you add localization to a website you're making it available in multiple languages.
 > The way it works is simple. Instead of putting the text you want to display in the components, it all goes into a JSON file. Then use the keys from the file in the components to get the text. You can add additional JSON files with the same keys and translated values for each desired language. Whatever language is set will determine which JSON file is used as the text for the app.<br/>
 > 
