@@ -6,7 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import store from "../../store/index";
 
 import Login from "./Login";
-
+import "../../i18n/config";
 it("render without crashing Loginpage", () => {
   render(
     <BrowserRouter>

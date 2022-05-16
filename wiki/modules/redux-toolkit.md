@@ -1,4 +1,19 @@
 # Redux Toolkit
+
+## Why Redux Toolkit 
+
+Redux has proven to be a popular option for state management at this point. Its pattern makes states predictable because reducers, which are pure functions, always produce the same output regardless of the state or actions passed.
+
+The Redux flow is also easily maintained and scalable due to its strict coding rules on how each component should behave and work. 
+
+Redux Toolkit was originally created to help address three common concerns about Redux:
+
+- "Configuring a Redux store is too complicated"
+- "I have to add a lot of packages to get Redux to do anything useful"
+- "Redux requires too much boilerplate code"
+
+## Overview
+
 The Redux Toolkit package is intended to be the standard way to write Redux logic. It was originally created to help address three common concerns about Redux:
 "Configuring a Redux store is too complicated"
 "I have to add a lot of packages to get Redux to do anything useful"
