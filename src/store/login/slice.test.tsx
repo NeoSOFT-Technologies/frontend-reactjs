@@ -1,7 +1,7 @@
 import mockApi from "../../resources/testconfig";
 import store from "../index";
 import { getUserDetails } from "./slice";
-
+import "../../i18n/config";
 test("calling the state of login", async () => {
   mockApi.onGet("/global/mock-data/loginCredentials.json").reply(200, {});
   const state = store.getState().login;
