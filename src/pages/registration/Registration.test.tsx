@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import store from "../../store/index";
 import Registration from "./Registration";
-
+import "../../i18n/config";
 it("render without crashing Registration", () => {
   render(
     <BrowserRouter>

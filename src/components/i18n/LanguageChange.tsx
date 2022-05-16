@@ -12,6 +12,7 @@ export default function LanguageChange() {
       <Button
         className="mx-1"
         onClick={() => changeLanguage("en")}
+        data-testid="english-btn"
         variant="info"
       >
         English
@@ -20,6 +21,7 @@ export default function LanguageChange() {
         className="mx-1"
         onClick={() => changeLanguage("hi")}
         variant="info"
+        data-testid="hindi-btn"
       >
         Hindi
       </Button>
