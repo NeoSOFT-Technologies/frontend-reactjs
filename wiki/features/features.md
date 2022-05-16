@@ -18,7 +18,7 @@
   <dt>Integrated Redux Toolkit</dt>
   <dd>Makes easier to write good redux applications and speeds up development.
 
-- [Learn more about TypeScript](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/redux-toolkit.md)
+- [Learn more about redux-toolkit](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/redux-toolkit.md)
   </dd>
 
   <dt>Based on TypeScript</dt>
