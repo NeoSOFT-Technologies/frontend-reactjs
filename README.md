@@ -17,6 +17,7 @@ Try it!! I am happy to hear your feedback or any kind of new features.
 - Integrated Redux Toolkit
 - Integrated sass
 - Based on Typescript Syntax
+- SEO
 - Production Ready Skeleton<br/><br/>
  [Explore features..](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/features.md)
 

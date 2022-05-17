@@ -11,6 +11,7 @@ import { getUserDetails } from "../../store/login/slice";
 import { RootState } from "../../store";
 import { LoginPageState } from "../../types/redux";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
 
 export default function Login() {
   const { t } = useTranslation();
@@ -88,6 +89,13 @@ export default function Login() {
         <Loader />
       ) : (
         <div className="d-flex align-items-center auth px-0 mt-3 login">
+          <Helmet>
+            <title>Login Page</title>
+            <meta
+              name="description"
+              content="Login page of React.ts Template application"
+            />
+          </Helmet>
           <div className="row w-100 mx-0">
             <div className="col-lg-6 col-md-8 col-sm-10 mx-auto">
               <div className="auth-form-light text-left py-5 px-4 px-sm-5">
