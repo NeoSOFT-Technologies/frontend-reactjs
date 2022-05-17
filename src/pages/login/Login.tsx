@@ -50,8 +50,6 @@ export default function Login() {
           password: regForPassword.test(value) ? "" : "password is not valid",
         });
         break;
-      default:
-        break;
     }
   };
   useEffect(() => {

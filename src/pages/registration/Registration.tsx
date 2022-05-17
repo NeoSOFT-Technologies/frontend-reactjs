@@ -52,8 +52,6 @@ export default function Registration() {
           password: regForPassword.test(value) ? "" : "Enter a valid Password",
         });
         break;
-      default:
-        break;
     }
   };
   const validate = () => {

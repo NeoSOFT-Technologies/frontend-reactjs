@@ -122,3 +122,4 @@ graph TD;
 - [Testing](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/testing/testing.md)
 - [Tyescript](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/typescript.md)
 - [Sass](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/sass.md)
+- [React-helmet](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/react-helmet.md)
