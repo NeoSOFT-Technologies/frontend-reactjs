@@ -10,6 +10,7 @@ import {
 import { ToastAlert } from "../../components/toast-alert/toast-alert";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
 export default function Registration() {
   const { t } = useTranslation();
   const [formdata, setFormData] = useState({
@@ -51,8 +52,6 @@ export default function Registration() {
           password: regForPassword.test(value) ? "" : "Enter a valid Password",
         });
         break;
-      default:
-        break;
     }
   };
   const validate = () => {
@@ -83,6 +82,13 @@ export default function Registration() {
 
   return (
     <>
+      <Helmet>
+        <title>Registration Page</title>
+        <meta
+          name="description"
+          content="Registration page of React.ts Template application"
+        />
+      </Helmet>
       <div className="d-flex align-items-center auth px-0 mt-3 login">
         <div className="row w-100 mx-0">
           <div className="col-lg-6 col-md-8 col-sm-10 mx-auto">

@@ -44,5 +44,8 @@
   
   <dt>Production Ready Skeleton</dt>
   <dd>The ease of usability, reliability and availability of software to the users </dd>
+
+  <dt>SEO</dt>
+  <dd>We support SEO (document head tags management) for search engines that support indexing of JavaScript content(eg. Google) with the help of ```react-helmet``` </dd>
 </dl>
 

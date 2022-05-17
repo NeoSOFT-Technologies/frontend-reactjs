@@ -37,6 +37,7 @@
     "react": "^17.0.2",
     "react-bootstrap": "^2.3.0",
     "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
     "react-i18next": "^11.16.9",
     "react-redux": "^8.0.0",
     "react-router-dom": "^6.2.2",
@@ -50,6 +51,7 @@
     "@testing-library/user-event": "^14.0.4",
     "@types/jest": "^27.4.1",
     "@types/react-dom": "^18.0.3",
+    "@types/react-helmet": "^6.1.5",
     "@types/react-router-dom": "^5.3.3",
     "@types/redux-mock-store": "^1.0.3",
     "@types/testing-library__react": "^10.2.0",
@@ -102,9 +104,8 @@
       "last 1 safari version"
     ]
   },
-  "overrides":{
-    "nth-check":"^2.0.1",
-    "css-what":"^6.0.1"
+  "overrides": {
+    "nth-check": "^2.0.1",
+    "css-what": "^6.0.1"
   }
-    
 }
