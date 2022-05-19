@@ -4,70 +4,70 @@ Skeleton for React & Redux Apps written in TypeScript (with integrated SASS, ESL
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
-### Exciting Features
+## Exciting Features
 
-<dl>
-  <dt>Quick start</dt>
-  <dd>Create components, containers, routes, selectors and sagas - and their tests - right from the CLI!</dd>
+
+  ### Quick start
+  Create components, containers, routes, selectors and sagas - and their tests - right from the CLI!
   
-  <dt>Integrated eslint, prettier and husky</dt>
-  <dd> Integrated ESLint, Prettier and Husky helps to take care of your code style, code formatting respectively and is a tool that allows us to easily wrangle Git hooks and run the scripts we want at those stages respectively. 
+  ### Integrated eslint, prettier and husky
+   Integrated ESLint, Prettier and Husky helps to take care of your code style, code formatting respectively and is a tool that allows us to easily wrangle Git hooks and run the scripts we want at those stages respectively. 
 
   - [Learn more about Eslint](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/eslint.md)
   - [Learn more about Prettier](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/prettier.md)
   - [Learn more about Husky](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/husky.md)
-  </dd>
   
-  <dt>Instant feedback</dt>
-  <dd>Enjoy the best DX (Developer eXperience) and code your app at the speed of thought! Your saved changes to the JS are reflected instantaneously without refreshing the page. Preserve application state even when you update something in the underlying code!</dd>
+  
+  ### Instant feedback
+  Enjoy the best DX (Developer eXperience) and code your app at the speed of thought! Your saved changes to the JS are reflected instantaneously without refreshing the page. Preserve application state even when you update something in the underlying code!
 
-  <dt>Integrated Redux Toolkit</dt>
-  <dd>Makes easier to write good redux applications and speeds up development.
+  ### Integrated Redux Toolkit
+  Makes easier to write good redux applications and speeds up development.
 
 - [Learn more about redux-toolkit](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/redux-toolkit.md)
-  </dd>
-
-  <dt>Based on TypeScript</dt>
-  <dd>Use template strings, object destructuring, arrow functions, Interfaces, JSX syntax and more.
-
-  - [Learn more about TypeScript](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/typescript.md)</dd>
-
-  <dt>Next generation SaaS</dt>
-  <dd>Variables, nested rules, inline imports, and more are all possible with Sass. It also aids organisation and allows us to develop style sheets more quickly. All versions of CSS are supported by Sass.
-
-  - [Learn more about Sass](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/sass.md)</dd>
-
-  <dt>Industry-standard i18n internationalization support</dt>
-  <dd>Scalable apps need to support multiple languages, easily add and support multiple languages with `react-i18next`.
   
-- [Learn more about i18next](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/i18next.md)</dd>
 
-  <dt>Offline-first</dt>
-  <dd>The next frontier in performant web apps: availability without a network connection from the instant your users load the app.</dd>
+  ### Based on TypeScript
+  Use template strings, object destructuring, arrow functions, Interfaces, JSX syntax and more.
 
-  <dt>Static code analysis</dt>
-  <dd>Focus on writing new features without worrying about formatting or code quality. With the right editor setup, your code will automatically be formatted and linted as you work.</dd>
+  - [Learn more about TypeScript](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/typescript.md)
+
+  ### Next generation SaaS
+  Variables, nested rules, inline imports, and more are all possible with Sass. It also aids organisation and allows us to develop style sheets more quickly. All versions of CSS are supported by Sass.
+
+  - [Learn more about Sass](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/sass.md)
+
+  ### Industry-standard i18n internationalization support
+  Scalable apps need to support multiple languages, easily add and support multiple languages with `react-i18next`.
   
-  <dt>Production Ready Skeleton</dt>
-  <dd>The ease of usability, reliability and availability of software to the users </dd>
+- [Learn more about i18next](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/i18next.md)
 
-  <dt>SEO startergy</dt>
-  <dd>We support SEO (document head tags management) for search engines that support indexing of JavaScript content(eg. Google) with the help of ```react-helmet``` </dd>
-</dl>
+  ### Offline-first
+  The next frontier in performant web apps: availability without a network connection from the instant your users load the app.
 
-### Purpose
+  ### Static code analysis
+  Focus on writing new features without worrying about formatting or code quality. With the right editor setup, your code will automatically be formatted and linted as you work.
+  
+  ### Production Ready Skeleton
+  The ease of usability, reliability and availability of software to the users 
+
+  ### SEO startergy
+  We support SEO (document head tags management) for search engines that support indexing of JavaScript content(eg. Google) with the help of ```react-helmet``` 
+
+
+## Purpose
 
 Our main purpose with this Skeleton is to start frontend application with react with redux toolkit and typescript.
 
 Try it!! I am happy to hear your feedback or any kind of new features.
 
-### Start the application
+## Start the application
 
 - Clone the Application git clone `https://github.com/NeoSOFT-Technologies/frontend-reactjs.git`
 - Install the dependencies `npm install`
 - Start the application `npm run dev`
 
-### Running the build
+## Running the build
 
 All the different build steps are orchestrated via [npm scripts](https://docs.npmjs.com/misc/scripts).
 Npm scripts basically allow us to call (and chain) terminal commands via npm.
@@ -91,12 +91,12 @@ Below is a list of all the scripts this template has available:
 | `test:coverage`              | Runs tests to check code coverage                                                                          |
 
 
-### NPM Modules 
+## NPM Modules 
 
   Node Modules folder is the repository of modules/library which you are using inside your project. What ever you are importing in your project that module or library should present inside the mode_module folder.When you do npm install that time that module or the library install inside the node_module folder and one entry added in package.json file. In your case frontend and backend are different project than obviously there will be 2 different node_modules folder for each of them.
   To check the list of modules used by us in this boilerplate click [here](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/index.md)
 
-### Project Structure
+## Project Structure
 
 | Name | Description |
 | ------------------------ | --------------------------------------------------------------------------------------------- |
@@ -125,7 +125,7 @@ Below is a list of all the scripts this template has available:
 | **build**                 | Contains the distributable (or output) from your TypeScript build. This is the code you ship  |
 | **node_modules**         | Contains all your npm dependencies                                                            |
 
-### Documentations
+## Documentations
 
 
 Below is the basic flow for setting up the store and slice and using them in components. The official documentation can be found [here](https://redux-toolkit.js.org/tutorials/typescript) if you would like more information.
@@ -152,9 +152,9 @@ graph TD;
 ```
 
 
-### Training 
+## Training 
 - [Concepts](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/setup/concepts.md)
-- [Getting started /Installation]()
+- [Getting started /Installation](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/getting_started.md)
 - [How to create components]()
 - [Redux Toolkit Flow of implementation]()
 - [Unit Test cases]()
@@ -163,7 +163,7 @@ graph TD;
 - [Auth Guard Strategy]()
 - [SEO Strategy]()
 
-### Video Tutorials
+## Video Tutorials
 - [Concepts](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/setup/concepts.md)
 - [Getting started /Installation](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/getting_started.md)
 - [How to create components]()
