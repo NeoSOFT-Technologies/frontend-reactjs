@@ -15,4 +15,5 @@
 - [Redux-toolkit](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/redux-toolkit.md)
 - [Testing](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/testing/testing.md)
 - [Tyescript](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/typescript.md)
+- [react-helmet](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/react-helmet.md)
 
