@@ -4,26 +4,66 @@ Skeleton for React & Redux Apps written in TypeScript (with integrated SASS, ESL
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
+### Exciting Features
+
+<dl>
+  <dt>Quick start</dt>
+  <dd>Create components, containers, routes, selectors and sagas - and their tests - right from the CLI!</dd>
+  
+  <dt>Integrated eslint, prettier and husky</dt>
+  <dd> Integrated ESLint, Prettier and Husky helps to take care of your code style, code formatting respectively and is a tool that allows us to easily wrangle Git hooks and run the scripts we want at those stages respectively. 
+
+  - [Learn more about Eslint](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/eslint.md)
+  - [Learn more about Prettier](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/prettier.md)
+  - [Learn more about Husky](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/husky.md)
+  </dd>
+  
+  <dt>Instant feedback</dt>
+  <dd>Enjoy the best DX (Developer eXperience) and code your app at the speed of thought! Your saved changes to the JS are reflected instantaneously without refreshing the page. Preserve application state even when you update something in the underlying code!</dd>
+
+  <dt>Integrated Redux Toolkit</dt>
+  <dd>Makes easier to write good redux applications and speeds up development.
+
+- [Learn more about redux-toolkit](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/redux-toolkit.md)
+  </dd>
+
+  <dt>Based on TypeScript</dt>
+  <dd>Use template strings, object destructuring, arrow functions, Interfaces, JSX syntax and more.
+
+  - [Learn more about TypeScript](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/typescript.md)</dd>
+
+  <dt>Next generation SaaS</dt>
+  <dd>Variables, nested rules, inline imports, and more are all possible with Sass. It also aids organisation and allows us to develop style sheets more quickly. All versions of CSS are supported by Sass.
+
+  - [Learn more about Sass](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/sass.md)</dd>
+
+  <dt>Industry-standard i18n internationalization support</dt>
+  <dd>Scalable apps need to support multiple languages, easily add and support multiple languages with `react-i18next`.
+  
+- [Learn more about i18next](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/i18next.md)</dd>
+
+  <dt>Offline-first</dt>
+  <dd>The next frontier in performant web apps: availability without a network connection from the instant your users load the app.</dd>
+
+  <dt>Static code analysis</dt>
+  <dd>Focus on writing new features without worrying about formatting or code quality. With the right editor setup, your code will automatically be formatted and linted as you work.</dd>
+  
+  <dt>Production Ready Skeleton</dt>
+  <dd>The ease of usability, reliability and availability of software to the users </dd>
+
+  <dt>SEO startergy</dt>
+  <dd>We support SEO (document head tags management) for search engines that support indexing of JavaScript content(eg. Google) with the help of ```react-helmet``` </dd>
+</dl>
+
 ### Purpose
 
 Our main purpose with this Skeleton is to start frontend application with react with redux toolkit and typescript.
 
 Try it!! I am happy to hear your feedback or any kind of new features.
 
-### Common Features
-
-- Quick start
-- Integrated eslint, prettier and husky
-- Integrated Redux Toolkit
-- Integrated sass
-- Based on Typescript Syntax
-- SEO
-- Production Ready Skeleton<br/><br/>
- [Explore features..](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/features.md)
-
 ### Start the application
 
-- Clone the Application git clone `https://github.com/santoshshinde2012/react-redux-typescript-boilerplate.git`
+- Clone the Application git clone `https://github.com/NeoSOFT-Technologies/frontend-reactjs.git`
 - Install the dependencies `npm install`
 - Start the application `npm run dev`
 
@@ -51,6 +91,11 @@ Below is a list of all the scripts this template has available:
 | `test:coverage`              | Runs tests to check code coverage                                                                          |
 
 
+### NPM Modules 
+
+  Node Modules folder is the repository of modules/library which you are using inside your project. What ever you are importing in your project that module or library should present inside the mode_module folder.When you do npm install that time that module or the library install inside the node_module folder and one entry added in package.json file. In your case frontend and backend are different project than obviously there will be 2 different node_modules folder for each of them.
+  To check the list of modules used by us in this boilerplate click [here](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/index.md)
+
 ### Project Structure
 
 | Name | Description |
@@ -62,8 +107,8 @@ Below is a list of all the scripts this template has available:
 | **src/resources/**               | Constant Variables such as images and strings  |
 | **src/routes/**               | Routing Configuration|
 | **src/store/**               |  Contains slice and hooks |
-| **src/store/${page-name}/slice.ts               |  Contains slice configuration {state, action and reducers} |
-| **src/store/index.ts               |  Entry point for store configuration|
+| **src/store**/${page-name}/slice.ts               |  Contains slice configuration {state, action and reducers} |
+| **src/store**/index.ts               |  Entry point for store configuration|
 | **src/styles/**               | SASS styles |
 | **src/types/**               | Schema or Types |
 | **src/utils/**               | Reusable utlity like api http client |
@@ -105,21 +150,26 @@ graph TD;
   H1-->H2[Export Reducers]
   H2--Use Typed Hooks in Components-->A2
 ```
-### Module/Feature
-- [Eslint](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/eslint.md)
-- [Axios](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/axios.md)
-- [Env](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/env.md)
-- [Husky](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/husky.md)
-- [i18next](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/i18next.md)
-- [Prettier](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/prettier.md)
-- [React-Dom](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/react-dom.md)
-- [React-router-dom](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/react-router-dom.md)
-- [React-redux](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/react-redux.md)
-- [React-script](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/react-scripts.md)
-- [React-toastify](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/react-toastify.md)
-- [Redux-mock-store](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/testing/redux-mock-store.md)
-- [Redux-toolkit](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/redux-toolkit.md)
-- [Testing](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/testing/testing.md)
-- [Tyescript](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/typescript.md)
-- [Sass](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/sass.md)
-- [React-helmet](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/react-helmet.md)
+
+
+### Training 
+- [Concepts](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/setup/concepts.md)
+- [Getting started /Installation]()
+- [How to create components]()
+- [Redux Toolkit Flow of implementation]()
+- [Unit Test cases]()
+- [How to implement]()
+- [API Factory]()
+- [Auth Guard Strategy]()
+- [SEO Strategy]()
+
+### Video Tutorials
+- [Concepts](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/setup/concepts.md)
+- [Getting started /Installation](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/getting_started.md)
+- [How to create components]()
+- [Redux Toolkit Flow of implementation]()
+- [Unit Test cases]()
+- [How to implement]()
+- [API Factory]()
+- [Auth Guard Strategy](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/authguard.md)
+- [SEO Strategy]()

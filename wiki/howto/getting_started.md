@@ -14,7 +14,7 @@ npm install
 
 after the successful run of thē command you will have folder name `node_modules` inside `frontend-reactjs` folder 
 
-Note : if the above command gives you the error you can force the installation by using `npm install -f`
+Note : if the above command gives you the error you can force the installation by using  `npm install -f`
 
 `Step 3` : Running  the project with this command : 
 ```
@@ -24,7 +24,7 @@ after the successful run of thē command you will find an output on the browser 
 
 `Step 4` : Now you can add pages and components to your project. For adding pages and components you need to understand the file structure for that you can refer to `README.md` file.
 
-### For adding an component go to `frontend-reactjs/src/components/` and add
+### For adding a component go to `frontend-reactjs/src/components/` and add
 ```
 📂 mycomponent
  |- 📝 MyComponent.tsx
