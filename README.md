@@ -21,37 +21,36 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   ### Instant feedback
   Enjoy the best DX (Developer eXperience) and code your app at the speed of thought! Your saved changes to the JS are reflected instantaneously without refreshing the page. Preserve application state even when you update something in the underlying code!
 
-  ### Integrated Redux Toolkit
+### Integrated Redux Toolkit
   Makes easier to write good redux applications and speeds up development.
 
 - [Learn more about redux-toolkit](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/redux-toolkit.md)
   
-
-  ### Based on TypeScript
+### Based on TypeScript
   Use template strings, object destructuring, arrow functions, Interfaces, JSX syntax and more.
 
   - [Learn more about TypeScript](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/typescript.md)
 
-  ### Next generation SaaS
+### Next generation SaaS
   Variables, nested rules, inline imports, and more are all possible with Sass. It also aids organisation and allows us to develop style sheets more quickly. All versions of CSS are supported by Sass.
 
   - [Learn more about Sass](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/sass.md)
 
-  ### Industry-standard i18n internationalization support
+### Industry-standard i18n internationalization support
   Scalable apps need to support multiple languages, easily add and support multiple languages with `react-i18next`.
   
 - [Learn more about i18next](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/i18next.md)
 
-  ### Offline-first
+### Offline-first
   The next frontier in performant web apps: availability without a network connection from the instant your users load the app.
 
-  ### Static code analysis
+### Static code analysis
   Focus on writing new features without worrying about formatting or code quality. With the right editor setup, your code will automatically be formatted and linted as you work.
   
-  ### Production Ready Skeleton
+### Production Ready Skeleton
   The ease of usability, reliability and availability of software to the users 
 
-  ### SEO startergy
+### SEO startergy
   We support SEO (document head tags management) for search engines that support indexing of JavaScript content(eg. Google) with the help of ```react-helmet``` 
 
 
@@ -155,12 +154,13 @@ graph TD;
 ## Training 
 - [Concepts](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/setup/concepts.md)
 - [Getting started /Installation](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/getting_started.md)
-- [How to create components]()
-- [Redux Toolkit Flow of implementation]()
-- [Unit Test cases]()
-- [How to implement]()
+- [How to create components](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/create_component.md)
+- [Redux Toolkit Flow of implementation](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/redux-toolkit.md)
+- [Unit Test cases and its implementation(jest)](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/unit_test_cases_jest.md)
+- [Unit Test cases and its implementation(axios-mock-adaptor)]()
 - [API Factory]()
-- [Auth Guard Strategy]()
+- [i18next implementation](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/i18next.md)
+- [Auth Guard Strategy](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/authguard.md)
 - [SEO Strategy]()
 
 ## Video Tutorials
