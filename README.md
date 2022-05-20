@@ -154,7 +154,7 @@ graph TD;
 ## Training 
 - [Concepts](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/setup/concepts.md)
 - [Getting started /Installation](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/getting_started.md)
-- [How to create components]()
+- [How to create components](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/create_component.md)
 - [Redux Toolkit Flow of implementation](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/redux-toolkit.md)
 - [Unit Test cases and its implementation(jest)](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/unit_test_cases_jest.md)
 - [Unit Test cases and its implementation(axios-mock-adaptor)]()
