@@ -156,7 +156,7 @@ graph TD;
 - [Getting started /Installation](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/getting_started.md)
 - [How to create components]()
 - [Redux Toolkit Flow of implementation](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/redux-toolkit.md)
-- [Unit Test cases and its implementation(jest)]()
+- [Unit Test cases and its implementation(jest)](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/unit_test_cases_jest.md)
 - [Unit Test cases and its implementation(axios-mock-adaptor)]()
 - [API Factory]()
 - [i18next implementation](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/i18next.md)
