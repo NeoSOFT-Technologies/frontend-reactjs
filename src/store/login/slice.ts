@@ -37,7 +37,6 @@ const slice = createSlice({
       state.data = undefined;
       state.error = undefined;
       localStorage.clear();
-      console.log("inside resetUserLogin");
     },
   },
   extraReducers(builder): void {

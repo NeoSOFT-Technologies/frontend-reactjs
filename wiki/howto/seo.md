@@ -25,7 +25,7 @@ import { Helmet } from 'react-helmet';
 `Step 3` : Enclose all your meta tags and title you want for the specific page.
 
 At the end your component should look something like this:-
-```
+```javascript
 import { Helmet } from 'react-helmet';
 
 function App() {
