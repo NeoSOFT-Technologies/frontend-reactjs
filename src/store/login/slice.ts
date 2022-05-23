@@ -31,7 +31,14 @@ export const getUserDetails = createAsyncThunk(
 const slice = createSlice({
   name: "user-login",
   initialState,
-  reducers: {},
+  reducers: {
+    resetUserLogin: (state) => {
+      state.loading = false;
+      state.data = undefined;
+      state.error = undefined;
+      localStorage.clear();
+    },
+  },
   extraReducers(builder): void {
     builder.addCase(getUserDetails.pending, (state) => {
       state.loading = true;
@@ -40,6 +47,7 @@ const slice = createSlice({
     });
     builder.addCase(getUserDetails.fulfilled, (state, action) => {
       state.loading = false;
+      localStorage.setItem("username", JSON.stringify(action.payload.username));
       state.data = action.payload as LoginData;
     });
     builder.addCase(getUserDetails.rejected, (state, action) => {
@@ -48,5 +56,5 @@ const slice = createSlice({
     });
   },
 });
-
+export const { resetUserLogin } = slice.actions;
 export default slice.reducer;
