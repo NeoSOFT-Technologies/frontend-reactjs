@@ -164,12 +164,9 @@ graph TD;
 - [SEO Strategy](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/seo.md)
 
 ## Video Tutorials
-- [Concepts](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/setup/concepts.md)
-- [Getting started /Installation](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/getting_started.md)
-- [How to create components]()
-- [Redux Toolkit Flow of implementation]()
-- [Unit Test cases]()
-- [How to implement]()
-- [API Factory]()
-- [Auth Guard Strategy](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/authguard.md)
+- [Project walkthrough](https://drive.google.com/file/d/1JPa1hknt9O615FB206VAlEhDLgI_v5Fi/view?usp=sharing)
+- [Auth Guard Strategy](https://www.loom.com/share/6521f92ac17147e6b36272a9cc3aaa83)
 - [SEO Strategy]()
+- [How to create a component]()
+- [Testing](https://www.loom.com/share/95b9afd7cd82457b88f05039736e9f23)
+- [Redux toolkit](https://youtube.com/playlist?list=PLM0LBHjz37LXSASzEv81f3tGptAsEGQUM)
