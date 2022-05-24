@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Form, Button, Alert, InputGroup } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import PasswordButtons from "../../components/password-field/Password";
+import PasswordButtons from "../../components/password-field/PasswordButtons";
 import Loader from "../../components/loader/Loader";
 import { regexForEmail, regForPassword, logo } from "../../resources/constants";
 
