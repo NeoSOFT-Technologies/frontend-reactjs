@@ -1,4 +1,4 @@
-import apiFactory from "../utils/api";
+import apiFactory from "../utils/api-factory";
 
 export const validateUserLoginCredentials = async () => {
   const response = await apiFactory().get(

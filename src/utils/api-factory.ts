@@ -3,7 +3,7 @@ import axios from "axios";
 const defaultBaseUrl =
   process.env.REACT_APP_API_BASEURL || "http://localhost:3000";
 class ApiFactoryWrapper {
-  private baseURL;
+  private readonly baseURL;
   constructor(URL: string = defaultBaseUrl) {
     this.baseURL = URL;
   }
@@ -13,6 +13,7 @@ class ApiFactoryWrapper {
       return JSON.parse(input);
     } catch {
       /* Ignore */
+      return false;
     }
   };
 

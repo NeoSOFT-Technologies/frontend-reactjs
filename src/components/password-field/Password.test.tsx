@@ -4,7 +4,7 @@ import "@testing-library/jest-dom/extend-expect";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import store from "../../store";
-import PasswordButtons from "./Password";
+import PasswordButtons from "./PasswordButtons";
 
 it("render without crashing Password Component", () => {
   render(
