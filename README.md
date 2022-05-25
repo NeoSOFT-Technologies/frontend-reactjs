@@ -157,7 +157,7 @@ graph TD;
 - [How to create components](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/create_component.md)
 - [Redux Toolkit Flow of implementation](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/redux-toolkit.md)
 - [Unit Test cases and its implementation(jest)](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/unit_test_cases_jest.md)
-- [Unit Test cases and its implementation(axios-mock-adaptor)]()
+- [Unit Test cases and its implementation(axios-mock-adaptor)](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/axios_mock_adapter_slice.md)
 - [API Factory]()
 - [i18next implementation](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/i18next.md)
 - [Auth Guard Strategy](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/authguard.md)
@@ -166,7 +166,7 @@ graph TD;
 ## Video Tutorials
 - [Project walkthrough](https://drive.google.com/file/d/1JPa1hknt9O615FB206VAlEhDLgI_v5Fi/view?usp=sharing)
 - [Auth Guard Strategy](https://www.loom.com/share/6521f92ac17147e6b36272a9cc3aaa83)
-- [SEO Strategy]()
+- [SEO Strategy](https://www.loom.com/share/edb1d901eadd456ea854cc2f7614f0a6)
 - [How to create a component](https://www.loom.com/share/8087eb4a39a94b43805c8378e98ec64c)
 - [Jest Testing](https://www.loom.com/share/95b9afd7cd82457b88f05039736e9f23)
 - [Axios mock adapter](https://www.loom.com/share/cdd62859b89548d7b9a494d97badf89a)
