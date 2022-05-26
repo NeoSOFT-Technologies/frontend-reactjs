@@ -5,7 +5,7 @@ export interface LoginData {
   description: string;
 }
 export interface LoginPageState {
-  data?: LoginData | undefined;
+  data?: LoginData;
   loading: boolean;
-  error?: string | undefined;
+  error?: string;
 }

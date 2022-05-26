@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form, InputGroup } from "react-bootstrap";
-import PasswordButtons from "../../components/password-field/Password";
+import PasswordButtons from "../../components/password-field/PasswordButtons";
 import {
   regexForEmail,
   regForPassword,
