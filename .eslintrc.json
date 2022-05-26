@@ -31,6 +31,9 @@
       "jest-dom",
       "prettier"
   ],
+  "ignorePatterns":[
+    "*spec.js","index.js","commands.js"
+  ],
   "rules": {
     "prettier/prettier": ["error",
       {
@@ -64,6 +67,7 @@
           "setupTests.ts",
           "serviceWorker.ts",
           "/*.tsx"
+        
         ]
       }
     ]

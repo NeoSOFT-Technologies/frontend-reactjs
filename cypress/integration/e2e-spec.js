@@ -1,0 +1,41 @@
+describe("My First E2E Test", () => {
+  it("should test login & registration page", () => {
+    cy.visit("http://localhost:3000");
+    cy.get(".row").click();
+    cy.get("[data-testid=signin-button]").click();
+    cy.get("[data-testid=email-input]").type("Jeff@gmail.com");
+    cy.get("[data-testid=password-input]").type("Jeff@123");
+    cy.get("[data-testid=password-input]").click();
+    cy.get("[data-testid=password-input]").type("{backspace}");
+    cy.get("[data-testid=password-input]").type("{backspace}");
+    cy.get("[data-testid=password-input]").type("{backspace}");
+    cy.get("[data-testid=password-input]").type("{backspace}");
+    cy.get("[data-testid=password-input]").type("{backspace}");
+    cy.get("[data-testid=password-input]").type("{backspace}");
+    cy.get("[data-testid=password-input]").type("{backspace}");
+    cy.get("[data-testid=password-input]").type("{backspace}");
+    cy.get("[data-testid=password-input]").type("{backspace}");
+    cy.get("[data-testid=password-input]").type("{backspace}");
+    cy.get("[data-testid=password-input]").type("{backspace}");
+    cy.get("[data-testid=password-input]").type("{backspace}");
+    cy.get("[data-testid=password-input]").type("{backspace}");
+    cy.get("[data-testid=password-input]").type("{backspace}");
+    cy.get("[data-testid=password-input]").type("{backspace}");
+    cy.get("[data-testid=password-input]").type("{backspace}");
+    cy.get("[data-testid=password-input]").type("{backspace}");
+
+    cy.get(".text-primary").click();
+    cy.get("[data-testid=username-input]").type("Jeff@gmail.com");
+    cy.get("[data-testid=password-input]").type("Jeff@123");
+    cy.get("[data-testid=english-btn]").click();
+    cy.get(".text-primary").click();
+    cy.get("[data-testid=email-input]").type("Jeff@gmail.com");
+    cy.get("[data-testid=password-input]").type("Jeff@123");
+    cy.get("[data-testid=signin-button]").click();
+    cy.get(".btn-primary").click();
+    cy.get("[data-testid=email-input]").type("Jeff@gmail.com");
+    cy.get("[data-testid=password-input]").type("Jeff@123");
+    cy.get("[data-testid=signin-button]").click();
+    cy.url().should("contains", "http://localhost:3000/landing");
+  });
+});
