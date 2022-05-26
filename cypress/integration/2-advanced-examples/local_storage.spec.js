@@ -10,7 +10,7 @@ context('Local Storage', () => {
 
   it('cy.clearLocalStorage() - clear all data in local storage', () => {
     // https://on.cypress.io/clearlocalstorage
-    cy.get('.ls-btn').click().should(() => {
+     const result=cy.get('.ls-btn').click().should(() => {
       expect(localStorage.getItem('prop1')).to.eq('red')
       expect(localStorage.getItem('prop2')).to.eq('blue')
       expect(localStorage.getItem('prop3')).to.eq('magenta')
@@ -24,9 +24,7 @@ context('Local Storage', () => {
     })
 
     cy.get('.ls-btn').click().should(() => {
-      expect(localStorage.getItem('prop1')).to.eq('red')
-      expect(localStorage.getItem('prop2')).to.eq('blue')
-      expect(localStorage.getItem('prop3')).to.eq('magenta')
+    return  result
     })
 
     // Clear key matching string in Local Storage
@@ -37,9 +35,7 @@ context('Local Storage', () => {
     })
 
     cy.get('.ls-btn').click().should(() => {
-      expect(localStorage.getItem('prop1')).to.eq('red')
-      expect(localStorage.getItem('prop2')).to.eq('blue')
-      expect(localStorage.getItem('prop3')).to.eq('magenta')
+      return  result
     })
 
     // Clear keys matching regex in Local Storage
