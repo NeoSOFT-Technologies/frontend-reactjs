@@ -33,7 +33,9 @@ function LandingPage() {
               <h1>{data.username}</h1>
               <span> Software Enginneer</span>
               <p>{data.description}</p>
-              <Button onClick={() => logout()}>Logout</Button>
+              <Button data-testid="logout-Btn" onClick={() => logout()}>
+                Logout
+              </Button>
             </div>
           </div>
         </div>

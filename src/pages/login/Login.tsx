@@ -80,6 +80,12 @@ export default function Login() {
       ToastAlert("Please fill all the fields", "error");
     }
   };
+  const showPasswords = () => {
+    if (!showPassword) {
+      return "password";
+    }
+    return "text";
+  };
 
   return (
     <>
@@ -121,7 +127,7 @@ export default function Login() {
                   <Form.Group className="mb-3">
                     <InputGroup>
                       <Form.Control
-                        type={showPassword ? "text" : "password"}
+                        type={showPasswords()}
                         name="password"
                         data-testid="password-input"
                         placeholder={t("password-placeholder")}

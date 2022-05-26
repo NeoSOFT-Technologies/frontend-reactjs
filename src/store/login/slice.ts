@@ -22,8 +22,8 @@ export const getUserDetails = createAsyncThunk(
         throw new Error("Incorrect Credentials");
       }
       return response;
-    } catch (error_) {
-      throw new Error(error(error_));
+    } catch (_error) {
+      throw new Error(error(_error));
     }
   }
 );
