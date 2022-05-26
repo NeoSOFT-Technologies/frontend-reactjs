@@ -8,7 +8,7 @@ context('Spies, Stubs, and Clock', () => {
     cy.visit('https://example.cypress.io/commands/spies-stubs-clocks')
 
     const obj = {
-      foo () { /* TODO document why this method 'foo' is empty */ },
+      foo () { console.log("default") },
     }
 
     const spy = cy.spy(obj, 'foo').as('anyArgs')

@@ -89,8 +89,8 @@ context('Misc', () => {
         scale: false,
         disableTimersAndAnimations: true,
         screenshotOnRunFailure: true,
-        onBeforeScreenshot () { /* TODO document why this method 'onBeforeScreenshot' is empty */  },
-        onAfterScreenshot () { /* TODO document why this method 'onAfterScreenshot' is empty */  },
+        onBeforeScreenshot () { console.log("default") },
+        onAfterScreenshot () { console.log("default") },
       })
     })
   })
