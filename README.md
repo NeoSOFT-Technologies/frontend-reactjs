@@ -150,10 +150,6 @@ graph TD;
   H1-->H2[Export Reducers]
   H2--Use Typed Hooks in Components-->A2
 ```
-## CodeCoverage
-- [Unit test cases](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/Unit_testcases.png)
-- [End-to-End testing](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/E2E_testing.png)
-- [SonarCloud-Bugs/CodeSmells/Vulnerabilities/SecurityHotspots](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/SonarCloud.png)
 
 ## Training 
 - [Concepts](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/setup/concepts.md)
@@ -166,6 +162,7 @@ graph TD;
 - [i18next implementation](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/i18next.md)
 - [Auth Guard Strategy](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/authguard.md)
 - [SEO Strategy](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/seo.md)
+- [Code Coverage]((https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/metrics.md))
 
 ## Video Tutorials
 - [Project walkthrough](https://drive.google.com/file/d/1JPa1hknt9O615FB206VAlEhDLgI_v5Fi/view?usp=sharing)
