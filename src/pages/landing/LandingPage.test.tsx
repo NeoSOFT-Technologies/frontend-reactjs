@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import React from "react";
 import "@testing-library/jest-dom/extend-expect";
 import { Provider } from "react-redux";
@@ -14,7 +14,4 @@ it("render without crashing LandingPage", () => {
       </Provider>
     </BrowserRouter>
   );
-  const logoutBtn = screen.getByTestId("keep-signed-in");
-  expect(logoutBtn).toBeInTheDocument();
-  fireEvent.click(logoutBtn);
 });

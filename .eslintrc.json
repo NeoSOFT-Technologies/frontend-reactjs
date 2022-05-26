@@ -32,7 +32,7 @@
       "prettier"
   ],
   "ignorePatterns":[
-    "*spec.js","index.js","commands.js"
+    "cypress/*"
   ],
   "rules": {
     "prettier/prettier": ["error",
