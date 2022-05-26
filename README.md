@@ -150,7 +150,9 @@ graph TD;
   H2--Use Typed Hooks in Components-->A2
 ```
 ## CodeCoverage
-- Unit testCases<br/><img src="https://github.com/NeoSOFT-Technologies/frontend-reactjs/tree/feature/documentation/wiki/features/unit_testcases_codecoverage.png"/>
+- [Unit test cases](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/Unit_testcases.png)
+- [End-to-End testing](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/E2E_testing.png)
+- [SonarCloud-Bugs/CodeSmells/Vulnerabilities/SecurityHotspots](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/SonarCloud.png)
 
 ## Training 
 - [Concepts](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/setup/concepts.md)
