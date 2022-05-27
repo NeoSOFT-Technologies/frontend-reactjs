@@ -67,6 +67,25 @@ Try it!! I am happy to hear your feedback or any kind of new features.
 - Install the dependencies `npm install`
 - Start the application `npm run dev`
 
+#### Test
+
+For this project, We choose [Jest](https://facebook.github.io/jest/) as our test framework for unit testcases.
+[Cypress](https://www.npmjs.com/package/cypress) is used for E2E testing.
+
+
+
+```bash
+# unit tests
+$ npm run test
+
+# e2e tests
+$ npm run test:e2e
+
+# test coverage
+$ npm run test -- --coverage --watchAll=false
+```
+>[ Current Code Coverage](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/metrics.md) 
+
 ## Running the build
 
 All the different build steps are orchestrated via [npm scripts](https://docs.npmjs.com/misc/scripts).
@@ -127,6 +146,9 @@ Below is a list of all the scripts this template has available:
 
 ## Documentations
 
+### Project flow
+<br/><img src="https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/images/flowchart.png"/>
+
 
 Below is the basic flow for setting up the store and slice and using them in components. The official documentation can be found [here](https://redux-toolkit.js.org/tutorials/typescript) if you would like more information.
 
@@ -150,22 +172,44 @@ graph TD;
   H1-->H2[Export Reducers]
   H2--Use Typed Hooks in Components-->A2
 ```
-## CodeCoverage
-- [Unit test cases](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/Unit_testcases.png)
-- [End-to-End testing](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/E2E_testing.png)
-- [SonarCloud-Bugs/CodeSmells/Vulnerabilities/SecurityHotspots](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/SonarCloud.png)
+## Modules
+
+- [Eslint](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/eslint.md)
+- [Axios](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/axios.md)
+- [Env](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/env.md)
+- [Husky](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/husky.md)
+- [i18next](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/i18next.md)
+- [Prettier](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/prettier.md)
+- [React-Dom](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/react-dom.md)
+- [React-router-dom](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/react-router-dom.md)
+- [React-redux](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/react-redux.md)
+- [React-script](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/react-scripts.md)
+- [React-toastify](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/react-toastify.md)
+- [Redux-mock-store](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/redux-mock-store.md)
+- [Redux-toolkit](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/redux-toolkit.md)
+- [Testing](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/testing/testing.md)
+- [Tyescript](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/typescript.md)
+- [react-helmet](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/react-helmet.md)
+
+
+## Miscellaneous
+
+- [Known Issues](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/miscellaneous/known-issues.md)
+- [Git commits](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/miscellaneous/git-commits.md)
+- [Installation Pretteri, Husky & Lint](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/miscellaneous/installation-pretteri-husky-lint.md)
 
 ## Training 
 - [Concepts](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/setup/concepts.md)
-- [Getting started /Installation](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/getting_started.md)
-- [How to create components](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/create_component.md)
-- [Redux Toolkit Flow of implementation](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/redux-toolkit.md)
-- [Unit Test cases and its implementation(jest)](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/unit_test_cases_jest.md)
-- [Unit Test cases and its implementation(axios-mock-adaptor)](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/axios_mock_adapter_slice.md)
+- [Getting started /Installation](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/training/getting_started.md)
+- [How to create components](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/training/create_component.md)
+- [Redux Toolkit Flow of implementation](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/training/redux-toolkit.md)
+- [Unit Test cases and its implementation(jest)](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/training/unit_test_cases_jest.md)
+- [Unit Test cases and its implementation(axios-mock-adaptor)](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/training/axios_mock_adapter_slice.md)
 - [API Factory]()
 - [i18next implementation](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/i18next.md)
-- [Auth Guard Strategy](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/authguard.md)
-- [SEO Strategy](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/howto/seo.md)
+- [Auth Guard Strategy](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/training/authguard.md)
+- [SEO Strategy](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/training/seo.md)
+
 
 ## Video Tutorials
 - [Project walkthrough](https://drive.google.com/file/d/1JPa1hknt9O615FB206VAlEhDLgI_v5Fi/view?usp=sharing)
@@ -175,3 +219,20 @@ graph TD;
 - [Jest Testing](https://www.loom.com/share/95b9afd7cd82457b88f05039736e9f23)
 - [Axios mock adapter](https://www.loom.com/share/cdd62859b89548d7b9a494d97badf89a)
 - [Redux toolkit](https://youtube.com/playlist?list=PLM0LBHjz37LXSASzEv81f3tGptAsEGQUM)
+
+## Contributing To This Project
+
+Contributions are welcome from anyone and everyone. We encourage you to review the [guiding principles for contributing](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/blob/main/wiki/docs/contribution.md)
+
+* [Bug reports](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/contribution/bug-reports.md)
+* [Feature requests](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/contribution/feature-requests.md)
+* [Pull requests](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/contribution/pull-requests.md)
+
+## Stay in touch
+
+* Website - [https://www.neosofttech.com/](https://www.neosofttech.com/)
+* Twitter - [@neosofttech](https://twitter.com/neosofttech)
+* Meetup -  [https://www.meetup.com/neosoft-technologies/](https://www.meetup.com/neosoft-technologies/)
+* Medium -  [https://medium.com/@neosofttech-technologies-blog](https://medium.com/@neosofttech-technologies-blog)
+* GitHub - [https://github.com/NeoSOFT-Technologies](https://github.com/NeoSOFT-Technologies)
+* Discord - [ReactJS](https://discord.gg/9xW5gQhQa4)
