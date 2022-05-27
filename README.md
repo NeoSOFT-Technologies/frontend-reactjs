@@ -5,72 +5,111 @@ Skeleton for React & Redux Apps written in TypeScript (with integrated SASS, ESL
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
-## Exciting Features
 
+## Overview
+ - Frontend-reactjs is an typescript boilerplate which is basically a set of web pages, built with HTML, CSS, and Javascript or any javascript libraries (in our case ReactJS in conjunction with typescript) used to create a quick start boilerplate web application. In this we using SEO stratergy to improve the visibility of the website,Implemented Localization,with auth-guard we have provided authentication,Integrated redux-toolkit,and quick start 
 
-  ### Quick start
-  Create components, containers, routes, selectors and sagas - and their tests - right from the CLI!
-  
-  ### Integrated eslint, prettier and husky
-   Integrated ESLint, Prettier and Husky helps to take care of your code style, code formatting respectively and is a tool that allows us to easily wrangle Git hooks and run the scripts we want at those stages respectively. 
+- ReactJS improves performance due to virtual DOM. The DOM is a cross-platform and programming API which deals with HTML, XML or XHTML. Most of the developers faced the problem when the DOM was updated, which slowed down the performance of the application. ReactJS solved this problem by introducing virtual DOM.
 
-  - [Learn more about Eslint](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/eslint.md)
-  - [Learn more about Prettier](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/prettier.md)
-  - [Learn more about Husky](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/husky.md)
-  
-  
-  ### Instant feedback
-  Enjoy the best DX (Developer eXperience) and code your app at the speed of thought! Your saved changes to the JS are reflected instantaneously without refreshing the page. Preserve application state even when you update something in the underlying code!
+- ReactJS is choosen by most of the web developers. It is because it offers a very rich JavaScript library. The JavaScript library provides more flexibility to the web developers to choose the approch they want to follow.
 
-### Integrated Redux Toolkit
-  Makes easier to write good redux applications and speeds up development.
+Take it for a test drive. We'd love to hear any feedback you have or if you've thought of a new feature.
 
-- [Learn more about redux-toolkit](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/modules/redux-toolkit.md)
-  
-### Based on TypeScript
+## Motivation
+
+- With this boilerplate, you can easily  quick start a react boilerplate using Reactjs.
+- Rather than spending time on the project setup, get on with the important stuff right away. 
+
+## Table of Contents
+
+- [Features](#features)
+- [Getting started](#getting-started)
+- [Project Structure](#project-structure)
+- [Documentation](#documentations)
+- [Miscellaneous](#miscellaneous)
+- [Trainings](#trainings)
+- [Video Tutorials](#video-tutorials)
+- [Contributing To This Project](#contributing-to-this-project)
+- [Stay in touch](#stay-in-touch)
+
+## Features
+
+- **Quick start**
+- **Integrated ESLint, Prettier and Husky**
+- **Production-Ready Skeleton**
+- **Common Error Handler**
+- **Auth Guard**
+- **Localization**
+- **SEO stratergy**
+- **Next generation Sass**
+- **Form Validation Using Regex**
+- **Testing**: unit and integration tests using [Jest](https://jestjs.io)
+- **Environment variables**: segregated env files for easier variable management.
+- **CI**: Continuous integration
+- **Docker support**
+- **Git hooks**: with [husky](https://github.com/typicode/husky) 
+- **Linting**: with [ESLint](https://eslint.org) and [Prettier](https://prettier.io)
+
+## Getting started
+
+Makes easier to write good redux applications and speeds up development.
+
+- Node <https://nodejs.org/en/> *use the LTS version*
+- NPM
+
+### Create Development Environment
+
   Use template strings, object destructuring, arrow functions, Interfaces, JSX syntax and more.
 
-  - [Learn more about TypeScript](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/typescript.md)
+- [Learn more about TypeScript](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/typescript.md)
 
-### Next generation SaaS
-  Variables, nested rules, inline imports, and more are all possible with Sass. It also aids organisation and allows us to develop style sheets more quickly. All versions of CSS are supported by Sass.
+```bash
+// clone the application
+$ git clone https://github.com/NeoSOFT-Technologies/frontend-reactjs
+```
+#### Install The Dependencies
 
-  - [Learn more about Sass](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/sass.md)
+- [Learn more about Sass](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/sass.md)
 
-### Industry-standard i18n internationalization support
-  Scalable apps need to support multiple languages, easily add and support multiple languages with `react-i18next`.
-  
-- [Learn more about i18next](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/i18next.md)
+```bash
+// Install the required npm modules
+$ npm install
+```
 
-### Offline-first
-  The next frontier in performant web apps: availability without a network connection from the instant your users load the app.
+#### Create The Environment Variables
 
-### Static code analysis
-  Focus on writing new features without worrying about formatting or code quality. With the right editor setup, your code will automatically be formatted and linted as you work.
-  
-### Production Ready Skeleton
-  The ease of usability, reliability and availability of software to the users 
+The `env` file should be placed in root folder with the following variables.
 
-### SEO startergy
-  We support SEO (document head tags management) for search engines that support indexing of JavaScript content(eg. Google) with the help of ```react-helmet``` 
+- `.env` : Default Environment File
+- `.env.test` : Test Environment File
+- `.env.production` : Production Environment File
+- `.env.staging` : Staging Environment File
 
 
-## Purpose
+```
+# .env example
 
-Our main purpose with this Skeleton is to start frontend application with react with redux toolkit and typescript.
+PORT= <port_no_for_application>
+REACT_APP_API_BASEURL=<backend_api_base_url>
+REACT_APP_CDN_URL=/global
+REACT_APP_IMAGES_CDN_URL=<baseurl_where_images_is_situated>
+REACT_APP_HOST=<frontend_api_base_url>
+```
 
-Try it!! I am happy to hear your feedback or any kind of new features.
 
-## Start the application
+#### Running the app
 
-- Clone the Application git clone `https://github.com/NeoSOFT-Technologies/frontend-reactjs.git`
-- Install the dependencies `npm install`
-- Start the application `npm run dev`
+```bash
+# development
+$ npm run start
+
+# production mode
+$ npm run start:prod
+```
 
 #### Test
 
-For this project, We choose [Jest](https://facebook.github.io/jest/) as our test framework for unit testcases.
-[Cypress](https://www.npmjs.com/package/cypress) is used for E2E testing.
+For this project, We chose [Jest](https://facebook.github.io/jest/) as our test framework.
 
 
 
@@ -78,15 +117,12 @@ For this project, We choose [Jest](https://facebook.github.io/jest/) as our test
 # unit tests
 $ npm run test
 
-# e2e tests
-$ npm run test:e2e
-
 # test coverage
-$ npm run test -- --coverage --watchAll=false
+$ npm run test:coverage
 ```
->[ Current Code Coverage](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/metrics.md) 
 
-## Running the build
+
+#### Running the build
 
 All the different build steps are orchestrated via [npm scripts](https://docs.npmjs.com/misc/scripts).
 Npm scripts basically allow us to call (and chain) terminal commands via npm.
@@ -96,24 +132,31 @@ To call a script, simply run `npm run <script-name>` from the command line.
 You'll notice that npm scripts can call each other which makes it easy to compose complex builds out of simple individual build scripts.
 Below is a list of all the scripts this template has available:
 
+| Npm Script      | Description                                                       |
+| --------------- | ----------------------------------------------------------------- |
+| `start`         | Start project in development mode                                 |
+| `start:prod`    | this script runs project in production mode                       |
+| `build`         | Full build. Runs ALL build tasks                                  |
+| `clean`         | On Run clean the installed node packages                          |
+| `clean:cdn`     | On Run clean css from build                                       |
+| `build:prod`    | Runs build and build:css together                                 |
+| `test`          | Runs tests using Jest test runner                                 |
+| `eject`         | Runs react-scripts eject                                          |
+| `format`        | Runs prettier roles on project files                              |
+| `test:coverage` | Gives the code coverage infrom to table                           |
+| `lint`          | Runs ESLint on project files                                      |
+| `lint:fix`      | Runs lint and fix the resolve able errors                         |
+| `lint:quiet`    | Run lint to show errors only                                      |
+| `prepare`       | install husky                                                     |
+| `precommit`     | Runs lint:fix and format before commit                            |
+| `prepush`       | Runs lint before push                                             |
 
-| Npm Script | Description  |
-| ------------------------- | ------------------------------------------------------------------------------------------------- |
-| `build`                   | Full build. Runs ALL build tasks |
-| `build:prod`                   | Full production build. Runs ALL build tasks |
-| `start:dev`                   | Run the application in dev mode                                       |
-| `build:css`                   | Build the css for production environment                                         |
-| `lint`                    | Runs ESLint on project files                                                                      |
-| `lint:fix`                    | Runs ESLint on project files and fixed the auto fix issues                                                                     |
-| `format`             | Runs the file formatter                                                              |
-| `test`                    | Runs tests using Jest test runner                                                                 |
-| `test:coverage`              | Runs tests to check code coverage                                                                          |
+## NPM Modules
+
+Node Modules folder is the repository of modules/library which you are using inside your project. What ever you are importing in your project that module or library should present inside the mode_module folder.When you do npm install that time that module or the library install inside the node_module folder and one entry added in package.json file. In your case frontend and backend are different project than obviously there will be 2 different node_modules folder for each of them.
+To check the list of modules used by us in this boilerplate click [here](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/index.md)
 
 
-## NPM Modules 
-
-  Node Modules folder is the repository of modules/library which you are using inside your project. What ever you are importing in your project that module or library should present inside the mode_module folder.When you do npm install that time that module or the library install inside the node_module folder and one entry added in package.json file. In your case frontend and backend are different project than obviously there will be 2 different node_modules folder for each of them.
-  To check the list of modules used by us in this boilerplate click [here](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/index.md)
 
 ## Project Structure
 
@@ -142,7 +185,9 @@ Below is a list of all the scripts this template has available:
 | **.github**              | Contains GitHub settings and configurations, including the GitHub Actions workflows            |
 | **.husky**              | Contains Husky settings and configurations            |
 | **build**                 | Contains the distributable (or output) from your TypeScript build. This is the code you ship  |
-| **node_modules**         | Contains all your npm dependencies                                                            |
+| **node_modules**         | Contains all your npm 
+dependencies                                                            |     
+
 
 ## Documentations
 
@@ -198,7 +243,7 @@ graph TD;
 - [Git commits](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/miscellaneous/git-commits.md)
 - [Installation Pretteri, Husky & Lint](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/miscellaneous/installation-pretteri-husky-lint.md)
 
-## Training 
+## trainings 
 - [Concepts](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/setup/concepts.md)
 - [Getting started /Installation](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/training/getting_started.md)
 - [How to create components](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/training/create_component.md)
