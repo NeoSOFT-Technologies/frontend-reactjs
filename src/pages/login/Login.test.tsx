@@ -36,7 +36,6 @@ it("render the input fields", () => {
   fireEvent.change(passwordBox, { target: { value: "deepthi@123" } });
   expect(screen.getByTestId("password-input")).toHaveValue("deepthi@123");
 });
-
 it("render the buttons", () => {
   render(
     <BrowserRouter>
@@ -51,4 +50,23 @@ it("render the buttons", () => {
   const keepSignedInBtn = screen.getByTestId("keep-signed-in");
   expect(keepSignedInBtn).toBeInTheDocument();
   fireEvent.click(keepSignedInBtn);
+});
+
+it("form should be submitted", () => {
+  render(
+    <BrowserRouter>
+      <Provider store={store}>
+        <Login />
+      </Provider>
+    </BrowserRouter>
+  );
+
+  const emailBox = screen.getByTestId("email-input");
+  fireEvent.change(emailBox, { target: { value: "deepthi@gmail.com" } });
+
+  const passwordBox = screen.getByTestId("password-input");
+  fireEvent.change(passwordBox, { target: { value: "deepthi@123" } });
+
+  const LoginBtn = screen.getByTestId("signin-button");
+  fireEvent.click(LoginBtn);
 });

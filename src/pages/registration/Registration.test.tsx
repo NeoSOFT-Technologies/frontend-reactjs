@@ -59,3 +59,23 @@ it("if submit button and cancel button renders", () => {
   expect(submitBtn).toBeInTheDocument();
   fireEvent.click(submitBtn);
 });
+it("form should be submitted", () => {
+  render(
+    <BrowserRouter>
+      <Provider store={store}>
+        <Registration />
+      </Provider>
+    </BrowserRouter>
+  );
+  const nameBox = screen.getByTestId("username-input");
+  fireEvent.change(nameBox, { target: { value: "deepthi" } });
+
+  const emailBox = screen.getByTestId("email-input");
+  fireEvent.change(emailBox, { target: { value: "deepthi@gmail.com" } });
+
+  const passwordBox = screen.getByTestId("password-input");
+  fireEvent.change(passwordBox, { target: { value: "deepthi@123" } });
+
+  const LoginBtn = screen.getByTestId("signup-button");
+  fireEvent.click(LoginBtn);
+});
