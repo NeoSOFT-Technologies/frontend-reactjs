@@ -11,6 +11,7 @@ import { ToastAlert } from "../../components/toast-alert/toast-alert";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
+import "./Registration.scss";
 export default function Registration() {
   const { t } = useTranslation();
   const [formdata, setFormData] = useState({
@@ -89,7 +90,7 @@ export default function Registration() {
           content="Registration page of React.ts Template application"
         />
       </Helmet>
-      <div className="d-flex align-items-center auth px-0 mt-3 login">
+      <div className="d-flex align-items-center auth px-0 mt-3 login ">
         <div className="row w-100 mx-0">
           <div className="col-lg-6 col-md-8 col-sm-10 mx-auto">
             <div className="auth-form-light text-left py-5 px-4 px-sm-5">
@@ -98,7 +99,7 @@ export default function Registration() {
               </div>
               <h2> {t("greeting")}</h2>
               <h4 className="font-weight-light">{t("sign-up-clause")}</h4>
-              <Form className="pt-3">
+              <Form className="backgroud-offwhite">
                 <Form.Group className="mb-3">
                   <Form.Control
                     type="text"
@@ -154,12 +155,12 @@ export default function Registration() {
                     {t("sign-up-button")}
                   </Button>
                 </div>
+                <div className="my-3 d-flex justify-content-end align-items-center">
+                  <Link className="text-primary  font-weight-heavy " to="/">
+                    {t("login-page-link")}
+                  </Link>
+                </div>
               </Form>
-              <div className="my-3 d-flex justify-content-end align-items-center">
-                <Link className="text-primary  font-weight-heavy " to="/">
-                  {t("login-page-link")}
-                </Link>
-              </div>
             </div>
           </div>
         </div>

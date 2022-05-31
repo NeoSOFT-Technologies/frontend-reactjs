@@ -243,7 +243,7 @@ graph TD;
 - [Git commits](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/miscellaneous/git-commits.md)
 - [Installation Pretteri, Husky & Lint](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/miscellaneous/installation-pretteri-husky-lint.md)
 
-## trainings 
+## Trainings 
 - [Concepts](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/setup/concepts.md)
 - [Getting started /Installation](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/training/getting_started.md)
 - [How to create components](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/training/create_component.md)

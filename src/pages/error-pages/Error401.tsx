@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import "./error-page.scss";
 export default function Error401() {
   const { t } = useTranslation();
   return (
     <div>
-      <div className="d-flex justify-content-center align-items-center text-center error-page bg-primary pt-5 pb-4 min-vh-100">
+      <div className="error-container error-page bg-primary pt-5 pb-4">
         <div className="container-fluid ">
           <div className="col-lg-8 mx-auto text-white">
             <div className="row align-items-center d-flex flex-row">

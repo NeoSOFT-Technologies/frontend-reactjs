@@ -12,6 +12,7 @@ import { RootState } from "../../store";
 import { LoginPageState } from "../../types/redux";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
+import "./Login.scss";
 
 export default function Login() {
   const { t } = useTranslation();
@@ -92,7 +93,7 @@ export default function Login() {
       {loginState.loading ? (
         <Loader />
       ) : (
-        <div className="d-flex align-items-center auth px-0 mt-3 login">
+        <div className="d-flex align-items-center auth px-0 mt-3 login ">
           <Helmet>
             <title>Login Page</title>
             <meta
@@ -100,7 +101,7 @@ export default function Login() {
               content="Login page of React.ts Template application"
             />
           </Helmet>
-          <div className="row w-100 mx-0">
+          <div className="row w-100 mx-0 ">
             <div className="col-lg-6 col-md-8 col-sm-10 mx-auto">
               <div className="auth-form-light text-left py-5 px-4 px-sm-5">
                 <div className="brand-logo">
@@ -108,7 +109,7 @@ export default function Login() {
                 </div>
                 <h2>{t("greeting")}</h2>
                 <h4 className="font-weight-light">{t("sign-in-clause")}</h4>
-                <Form className="pt-3">
+                <Form className="backgroud-offwhite">
                   <Form.Group className="mb-3">
                     <Form.Control
                       type="email"
