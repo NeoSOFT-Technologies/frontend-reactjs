@@ -28,45 +28,21 @@ it("render the input fields", () => {
   const emailBox = screen.getByTestId("email-input");
   expect(emailBox).toBeInTheDocument();
   expect(emailBox).toHaveAttribute("type", "email");
-  fireEvent.change(emailBox, { target: { value: "deepthi@gmail.com" } });
-  expect(screen.getByTestId("email-input")).toHaveValue("deepthi@gmail.com");
 
   const passwordBox = screen.getByTestId("password-input");
   expect(passwordBox).toBeInTheDocument();
   expect(passwordBox).toHaveAttribute("type", "password");
-  fireEvent.change(passwordBox, { target: { value: "deepthi@123" } });
-  expect(screen.getByTestId("password-input")).toHaveValue("deepthi@123");
-});
-it("render the buttons", () => {
-  render(
-    <BrowserRouter>
-      <Provider store={store}>
-        <Login />
-      </Provider>
-    </BrowserRouter>
-  );
+
   const submitBtn = screen.getByTestId("signin-button");
   fireEvent.click(submitBtn);
 
   const keepSignedInBtn = screen.getByTestId("keep-signed-in");
   expect(keepSignedInBtn).toBeInTheDocument();
   fireEvent.click(keepSignedInBtn);
-});
 
-it("form should be submitted", () => {
-  render(
-    <BrowserRouter>
-      <Provider store={store}>
-        <Login />
-      </Provider>
-    </BrowserRouter>
-  );
-  const emailBox1 = screen.getByTestId("email-input");
-  fireEvent.change(emailBox1, { target: { value: "deepthi@gmail.com" } });
+  fireEvent.change(emailBox, { target: { value: "deepthi@gmail.com" } });
 
-  const passwordBox1 = screen.getByTestId("password-input");
-  fireEvent.change(passwordBox1, { target: { value: "deepthi@123" } });
+  fireEvent.change(passwordBox, { target: { value: "deepthi@123" } });
 
-  const LoginBtn1 = screen.getByTestId("signin-button");
-  fireEvent.click(LoginBtn1);
+  fireEvent.click(submitBtn);
 });
