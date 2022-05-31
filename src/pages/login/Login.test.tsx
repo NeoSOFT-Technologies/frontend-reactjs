@@ -7,6 +7,7 @@ import store from "../../store/index";
 
 import Login from "./Login";
 import "../../i18n/config";
+
 it("render without crashing Loginpage", () => {
   render(
     <BrowserRouter>
@@ -60,13 +61,12 @@ it("form should be submitted", () => {
       </Provider>
     </BrowserRouter>
   );
+  const emailBox1 = screen.getByTestId("email-input");
+  fireEvent.change(emailBox1, { target: { value: "deepthi@gmail.com" } });
 
-  const emailBox = screen.getByTestId("email-input");
-  fireEvent.change(emailBox, { target: { value: "deepthi@gmail.com" } });
+  const passwordBox1 = screen.getByTestId("password-input");
+  fireEvent.change(passwordBox1, { target: { value: "deepthi@123" } });
 
-  const passwordBox = screen.getByTestId("password-input");
-  fireEvent.change(passwordBox, { target: { value: "deepthi@123" } });
-
-  const LoginBtn = screen.getByTestId("signin-button");
-  fireEvent.click(LoginBtn);
+  const LoginBtn1 = screen.getByTestId("signin-button");
+  fireEvent.click(LoginBtn1);
 });
