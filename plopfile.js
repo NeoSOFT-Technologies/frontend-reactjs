@@ -1,7 +1,7 @@
-const config = (plop) => {
+const plopfile = (plop) => {
   plop.setHelper("camelCase", (text) => {
     return text
-      .replace(/^\w|[A-Z]|\b\w/g, function (word) {
+      .replace(/^(?:\w|[A-Z]|\b\w)$/g, function (word) {
         return word.toUpperCase();
       })
       .replace(/\s+/g, "");
@@ -133,4 +133,4 @@ const config = (plop) => {
   });
 };
 
-export default config;
+export default plopfile;
