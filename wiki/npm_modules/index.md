@@ -16,4 +16,4 @@
 - [Testing](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/testing/testing.md)
 - [Tyescript](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/typescript.md)
 - [react-helmet](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/react-helmet.md)
-
+- [Plop](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/plop.md)

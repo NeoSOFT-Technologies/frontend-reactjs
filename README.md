@@ -36,6 +36,7 @@ Take it for a test drive. We'd love to hear any feedback you have or if you've t
 
 - **Quick start**
 - **Integrated ESLint, Prettier and Husky**
+- **Simple and Standard scaffolding**
 - **Production-Ready Skeleton**
 - **Common Error Handler**
 - **Auth Guard**
@@ -235,6 +236,7 @@ graph TD;
 - [Testing](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/testing/testing.md)
 - [Tyescript](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/features/typescript.md)
 - [react-helmet](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/react-helmet.md)
+- [Plop](https://github.com/NeoSOFT-Technologies/frontend-reactjs/blob/main/wiki/npm_modules/plop.md)
 
 
 ## Miscellaneous
