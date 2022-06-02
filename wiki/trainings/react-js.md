@@ -42,12 +42,35 @@ Composition
 ## React Libraries/Ecosystem
 
 - Form & Validation
+    - Formik and Yup
+    - React Hook Form
+    - React Final Form
 - State Manangment
+    - Redux
+    - Apollo Client (GraphQL)
+    - Mobx
+    - Recoil
 - Routing
+    - React Router
 - Type Checking
+    - Flow
+    - Typescript
 - Styling
+    - Styled Components
+    - CSS Modules
+    - Tailwind CSS
+    - UI Component Libs
+        - Reactstrap
+        - MaterialUI
+        - Ant Design
+        - Chakra UI
+        - Tailwindui
 - API Client
+    - Axios
+    - GraphQL
 - Framework & Static Site Generator
+    - NextJS(SSR)
+    - GatsBy(SSG)
 
 ## Debugging
 
