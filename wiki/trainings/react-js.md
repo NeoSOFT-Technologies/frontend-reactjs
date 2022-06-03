@@ -83,3 +83,22 @@ Composition
 - React Testing Library
 
 ## Practice Projects or Components
+
+- React Fundamentals (Basic)
+    - Todo App (Basics)
+    - Recipie App (Basics)
+- Intermediate (Beyond Basic)
+    - User Management App (CRUD) - Intermediate
+    - Pizza Delivery App - Intermediate
+- Advanced
+    - Hotel Booking App (goibibo hotel, trivago)
+    - Flight Booking App (makemytrip)
+    - Online Trading App
+- Reusable Components & Host on Storybook
+    - Autocomplete Component
+    - Calendar Component
+    - Data Table Component
+- Custom Hooks
+    - Dark Mode
+    - Localstorage Handler
+    - SocketIO Connector        
