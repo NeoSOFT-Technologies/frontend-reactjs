@@ -11,7 +11,7 @@ import { ToastAlert } from "../../components/toast-alert/toast-alert";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
-import "./Registration.scss";
+import "./Registration.css";
 export default function Registration() {
   const { t } = useTranslation();
   const [formdata, setFormData] = useState({

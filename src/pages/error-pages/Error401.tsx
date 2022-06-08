@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import "./error-page.scss";
+import "./error-page.css";
 export default function Error401() {
   const { t } = useTranslation();
   return (

@@ -5,17 +5,14 @@
   "author": "Santosh Shinde",
   "private": true,
   "type": "module",
-  
   "scripts": {
     "start": "react-scripts start",
     "generate": "plop",
     "build": "react-scripts build",
     "clean": "rimraf {bin,build}",
     "clean:cdn": "rimraf build/global/css",
-    "build:css": "npm run clean && npm run clean:cdn && sass --no-source-map --style=compressed src/styles/index.scss public/global/css/index.css",
-    "watch:css": "npm run build:css && sass --watch src/styles:public/global/css",
-    "build:prod": "npm run build:css && npm run build -- --profile",
-    "dev": "npm-run-all -p watch:css start",
+    "build:prod": "npm run  build -- --profile",
+    "dev": "npm-run-all -p",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "format": "prettier --write \"src/**/*.{ts,tsx,json,css,scss}\"",
@@ -31,13 +28,11 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.0",
-    "@types/node": "^17.0.23",
     "@types/react": "^18.0.1",
     "@types/react-redux": "^7.1.23",
     "axios": "^0.26.0",
     "axios-mock-adapter": "^1.20.0",
     "bootstrap": "^4.3.1",
-    "compass-mixins": "^0.12.11",
     "i18next": "^21.8.0",
     "react": "^17.0.2",
     "react-bootstrap": "^2.3.0",
@@ -78,8 +73,7 @@
     "husky": "^7.0.4",
     "npm-run-all": "^4.1.5",
     "plop": "^3.1.0",
-    "prettier": "^2.5.1",
-    "sass": "^1.49.9"
+    "prettier": "^2.5.1"
   },
   "jest": {
     "coveragePathIgnorePatterns": [
@@ -110,9 +104,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "overrides": {
-    "nth-check": "^2.0.1",
-    "css-what": "^6.0.1"
   }
 }
