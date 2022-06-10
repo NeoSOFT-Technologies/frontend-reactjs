@@ -1,4 +1,5 @@
 import React from "react";
+import "./PasswordButton.css";
 
 interface IProperties {
   viewPassword: boolean;

@@ -6,7 +6,7 @@ import Loader from "../../components/loader/Loader";
 import { ToastAlert } from "../../components/toast-alert/toast-alert";
 import { useAppSelector } from "../../store/hooks";
 import { resetUserLogin } from "../../store/login/slice";
-import "./landing.scss";
+import "./landing.css";
 
 function LandingPage() {
   const navigate = useNavigate();

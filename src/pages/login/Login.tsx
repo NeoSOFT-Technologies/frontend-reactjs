@@ -12,7 +12,7 @@ import { RootState } from "../../store";
 import { LoginPageState } from "../../types/redux";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
-import "./Login.scss";
+import "./Login.css";
 
 export default function Login() {
   const { t } = useTranslation();
