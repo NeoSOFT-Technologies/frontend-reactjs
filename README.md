@@ -7,6 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 ## Overview
+
  - Frontend-reactjs is an typescript boilerplate which is basically a set of web pages, built with HTML, CSS, and Javascript or any javascript libraries (in our case ReactJS in conjunction with typescript) used to create a quick start boilerplate web application. In this we using SEO stratergy to improve the visibility of the website,Implemented Localization,with auth-guard we have provided authentication,Integrated redux-toolkit,and quick start 
 
 - ReactJS improves performance due to virtual DOM. The DOM is a cross-platform and programming API which deals with HTML, XML or XHTML. Most of the developers faced the problem when the DOM was updated, which slowed down the performance of the application. ReactJS solved this problem by introducing virtual DOM.
