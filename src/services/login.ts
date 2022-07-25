@@ -1,8 +1,30 @@
-import apiFactory from "../utils/api-factory";
+import HttpClient from "./http-client";
 
-export const validateUserLoginCredentials = async () => {
-  const response = await apiFactory().get(
-    "/global/mock-data/loginCredentials.json"
-  );
-  return response.data;
-};
+export interface ILoginResponse {
+  username: string;
+  password: string;
+  title: string;
+  description: string;
+}
+
+export default class LoginHttpClient {
+  /**
+   * login 
+
+   * @returns
+   */
+  public static async loginresponse(): Promise<ILoginResponse> {
+    // login API
+    const {
+      data: { username, password, title, description },
+    } = await HttpClient.get("/global/mock-data/loginCredentials.json");
+    const response: ILoginResponse = {
+      username,
+      password,
+      title,
+      description,
+    };
+
+    return response;
+  }
+}
