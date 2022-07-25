@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import LoginHttpClient from "../../services/login";
 import { LoginData, LoginPageState } from "../../types/redux";
-import error from "../../utils/error";
+import error from "../error";
 interface ILoginDataConditions {
   username: string;
   password: string;

@@ -3,11 +3,11 @@ class AuthGuard {
     this.errorComponent = errorComponent;
   }
 
-  protect = (component: any, isAuthenticated: any) => {
+  public protect(component: any, isAuthenticated: any): any {
     const authenticationState = isAuthenticated;
 
     return authenticationState ? component : this.errorComponent;
-  };
+  }
 }
 
 export default AuthGuard;

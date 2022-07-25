@@ -61,4 +61,16 @@ export default class HttpClient {
   public static post(url: string, payload: any): any {
     return this.client().post(url, payload);
   }
+
+  public static patch(url: string, payload: any): any {
+    return this.client().post(url, payload);
+  }
+
+  public static put(url: string, payload: any): any {
+    return this.client().post(url, payload);
+  }
+
+  public static delete(url: string): any {
+    return this.client().post(url);
+  }
 }
