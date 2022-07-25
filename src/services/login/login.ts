@@ -10,7 +10,6 @@ export interface ILoginResponse {
 export default class LoginHttpClient {
   /**
    * login 
-
    * @returns
    */
   public static async loginresponse(): Promise<ILoginResponse> {
