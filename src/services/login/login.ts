@@ -1,4 +1,4 @@
-import HttpClient from "./http-client";
+import HttpClient from "../http-client/http-client";
 
 export interface ILoginResponse {
   username: string;

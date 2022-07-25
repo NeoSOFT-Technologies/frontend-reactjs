@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import LoginHttpClient from "../../services/login";
+import LoginHttpClient from "../../services/login/login";
 import { LoginData, LoginPageState } from "../../types/redux";
-import error from "../error";
+import errorHandler from "../error-handler";
 interface ILoginDataConditions {
   username: string;
   password: string;
@@ -22,8 +22,9 @@ export const getUserDetails = createAsyncThunk(
         throw new Error("Incorrect Credentials");
       }
       return response;
-    } catch (_error) {
-      throw new Error(error(_error));
+    } catch (_error: any) {
+      const errorMessage = errorHandler(_error);
+      throw new Error(errorMessage);
     }
   }
 );

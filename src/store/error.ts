@@ -1,10 +1,13 @@
-// eslint-disable-next-line  @typescript-eslint/no-explicit-any
-const error = (obj: any): string => {
+const error = (object: any): any => {
   let message = "Undefined Error";
-  if (obj && obj.message) {
-    message = obj.message;
+  let statusCode = "400";
+  if (object && object.message) {
+    message = object.message;
   }
-  return message;
+  if (object && object.statusCode) {
+    statusCode = object.statusCode.toString();
+  }
+  return { ...object, statusCode, message };
 };
 
 export default error;
