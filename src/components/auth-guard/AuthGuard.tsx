@@ -3,11 +3,13 @@ class AuthGuard {
     this.errorComponent = errorComponent;
   }
 
-  protect = (component: any, isAuthenticated: any) => {
+  public protect(
+    component: JSX.Element | null,
+    isAuthenticated: any
+  ): JSX.Element | null {
     const authenticationState = isAuthenticated;
-
     return authenticationState ? component : this.errorComponent;
-  };
+  }
 }
 
 export default AuthGuard;

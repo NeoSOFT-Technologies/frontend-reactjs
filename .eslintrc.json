@@ -89,5 +89,9 @@
           "@typescript-eslint/no-empty-function": "off"
         }
       }
-    ]
+    ],
+"globals": {
+  "React":true,
+  "JSX":true
+}
 }
