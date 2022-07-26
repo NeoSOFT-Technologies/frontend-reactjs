@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import LoginHttpClient from "../../services/login/login";
 import { LoginData, LoginPageState } from "../../types/redux";
-import errorHandler from "../error-handler";
+import ErrorHandler from "../error-handler";
 interface ILoginDataConditions {
   username: string;
   password: string;
@@ -11,6 +11,7 @@ const initialState: LoginPageState = {
   loading: false,
   error: undefined,
 };
+const errorHandler = new ErrorHandler();
 
 export const getUserDetails = createAsyncThunk(
   "login/user",
@@ -23,7 +24,7 @@ export const getUserDetails = createAsyncThunk(
       }
       return response;
     } catch (_error: any) {
-      const errorMessage = errorHandler(_error);
+      const errorMessage = errorHandler.handler(_error);
       throw new Error(errorMessage);
     }
   }
