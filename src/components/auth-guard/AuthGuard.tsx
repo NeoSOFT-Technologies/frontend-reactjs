@@ -8,8 +8,6 @@ class AuthGuard {
     isAuthenticated: any
   ): JSX.Element | null {
     const authenticationState = isAuthenticated;
-    console.log(component);
-
     return authenticationState ? component : this.errorComponent;
   }
 }
