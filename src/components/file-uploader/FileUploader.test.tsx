@@ -20,6 +20,7 @@ it("checking the input fields", async () => {
   expect(fileBox).toBeInTheDocument();
   expect(fileBox).toHaveAttribute("type", "file");
   fireEvent.change(fileBox);
+  fireEvent.change(fileBox, { target: { value: "" } });
 
   const uploadBtn = screen.getByTestId("upload-btn");
   expect(uploadBtn).toBeInTheDocument();

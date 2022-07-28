@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+import "./FileUploader.css";
 export default function FileUploader() {
   const UPLOAD_ENDPOINT = "http://localhost:8899/api/neostore/upload";
-  const [fileSelected, setFileSelected] = useState<File>(); // also tried <string | Blob>
+  const [fileSelected, setFileSelected] = useState<File>();
 
   const handleOnChange = function (e: React.ChangeEvent<HTMLInputElement>) {
     const fileList = e.target.files;
@@ -50,7 +50,7 @@ export default function FileUploader() {
         onChange={handleOnChange}
       />
 
-      <button type="submit" data-testid="upload-btn">
+      <button type="submit" className="button" data-testid="upload-btn">
         Upload File
       </button>
     </form>
