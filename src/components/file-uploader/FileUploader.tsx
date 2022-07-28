@@ -46,10 +46,13 @@ export default function FileUploader() {
         type="file"
         name="file"
         accept=".png,.jpg,.jpeg,.txt,.pdf"
+        data-testid="file-input"
         onChange={handleOnChange}
       />
 
-      <button type="submit">Upload File</button>
+      <button type="submit" data-testid="upload-btn">
+        Upload File
+      </button>
     </form>
   );
 }
