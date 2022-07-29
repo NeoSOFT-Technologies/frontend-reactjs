@@ -10,7 +10,8 @@ import { RootState } from "./store";
 import Registration from "./pages/registration/Registration";
 import LanguageChange from "./components/i18n/LanguageChange";
 import { Helmet } from "react-helmet";
-import FileUploader from "./components/file-uploader/FileUploader";
+
+import Abc from "./components/file-uploader/abc";
 function App() {
   const loginState: LoginPageState = useAppSelector(
     (state: RootState) => state.login
@@ -36,7 +37,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/file" element={<FileUploader />} />
+          <Route path="/file" element={<Abc />} />
           <Route path="/registration" element={<Registration />} />
           <Route
             path={"/landing"}

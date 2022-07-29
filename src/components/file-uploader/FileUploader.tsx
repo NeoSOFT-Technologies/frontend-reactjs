@@ -1,58 +1,128 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React, { useRef, useState } from "react";
+import FileUploaderHttpClient from "../../services/file-uploader/file-uploader";
 import "./FileUploader.css";
-export default function FileUploader() {
-  const UPLOAD_ENDPOINT = "http://localhost:8899/api/neostore/upload";
-  const [fileSelected, setFileSelected] = useState<File>();
 
-  const handleOnChange = function (e: React.ChangeEvent<HTMLInputElement>) {
-    const fileList = e.target.files;
+const KILO_BYTES_PER_BYTE = 1000;
+const DEFAULT_MAX_FILE_SIZE_IN_BYTES =
+  process.env.REACT_APP_MAX_FILE_SIZE_IN_BYTES || 500_000;
 
-    if (!fileList) return;
+const convertBytesToKB = (bytes: number) =>
+  Math.round(bytes / KILO_BYTES_PER_BYTE);
 
-    setFileSelected(fileList[0]);
+const FileUpload = ({
+  label,
+  onSubmit,
+  updateFilesCb,
+  maxFileSizeInBytes = DEFAULT_MAX_FILE_SIZE_IN_BYTES,
+  ...otherProps
+}: any) => {
+  const fileInputField = useRef();
+  const [files, setFiles] = useState<{ [T: number]: File }[]>([]);
+  const [keys, setKeys] = useState(0);
+
+  const convertNestedObjectToArray = (nestedObj: { [T: number]: File }[]) =>
+    nestedObj.map((fileObj) => Object.values(fileObj)[0]);
+
+  const callUpdateFilesCb = (selectedFiles: { [T: number]: File }[]) => {
+    console.log(selectedFiles);
+    const filesAsArray = convertNestedObjectToArray(selectedFiles);
+    updateFilesCb(filesAsArray);
   };
 
-  const uploadFile = async function () {
-    if (fileSelected) {
-      const formData = new FormData();
-      formData.append("image", fileSelected, fileSelected.name);
-      return axios.post(UPLOAD_ENDPOINT, formData, {
-        headers: {
-          "content-type": "multipart/form-data",
-        },
+  const addNewFile = async (newFile: File) => {
+    let selectedFiles: { [T: number]: File }[] = [];
+    if (newFile.size < maxFileSizeInBytes) {
+      if (!otherProps.multiple) {
+        selectedFiles = [{ 0: newFile }];
+      } else {
+        const newFileData = { keys: newFile };
+        selectedFiles = [...files, newFileData];
+        setKeys(keys + 1);
+      }
+      setFiles(() => {
+        callUpdateFilesCb(selectedFiles);
+        return selectedFiles;
       });
     }
   };
+  console.log(files);
 
-  const handleSubmit = async (e: { preventDefault: () => void }) => {
-    e.preventDefault();
-    if (fileSelected) {
-      const numb = fileSelected?.size / 1024 / 1024;
+  const handleNewFileUpload = async (e: { target: { files: any } }) => {
+    const { files: newFiles } = e.target;
 
-      if (numb > 2) {
-        alert("to big, maximum is 2MiB. You file size is: " + numb + " MiB");
-      } else {
-        const res = await uploadFile();
-        console.log(res);
-      }
+    if (newFiles.length > 0) {
+      await addNewFile(newFiles[0]);
     }
   };
 
-  return (
-    <form onSubmit={handleSubmit}>
-      <h1>React File Upload</h1>
-      <input
-        type="file"
-        name="file"
-        accept=".png,.jpg,.jpeg,.txt,.pdf"
-        data-testid="file-input"
-        onChange={handleOnChange}
-      />
+  const removeFile = (id: string) => {
+    setFiles((prevState) =>
+      prevState.filter((file) => Object.keys(file)[0] !== id)
+    );
+  };
+  const handleSubmit = async () => {
+    const selectedFiles = convertNestedObjectToArray(files);
+    const response = await FileUploaderHttpClient.FileUploader(selectedFiles);
+    console.log(response);
+  };
 
-      <button type="submit" className="button" data-testid="upload-btn">
-        Upload File
-      </button>
-    </form>
+  return (
+    <>
+      <div className="p-2 ">
+        <div className="heading">{label}</div>
+
+        <h4> Upload {otherProps.multiple ? "files" : "a file"}</h4>
+
+        <input
+          type="file"
+          ref={fileInputField}
+          onChange={handleNewFileUpload}
+          title=""
+          value=""
+          {...otherProps}
+        />
+        <button type="submit" onClick={onSubmit || handleSubmit}>
+          Submit
+        </button>
+      </div>
+      <div>
+        <span>To Upload</span>
+        <div>
+          <div>
+            {files.map((fileObj) => {
+              const id = Object.keys(fileObj)[0];
+              const file = Object.values(fileObj)[0];
+              const isImageFile = file.type.split("/")[0] === "image";
+              return (
+                <div key={id} className="img-row">
+                  <div>
+                    {isImageFile && (
+                      <img
+                        src={URL.createObjectURL(file)}
+                        alt={`file preview ${file.name}`}
+                        height={150}
+                        width={150}
+                      />
+                    )}
+                    <div>
+                      <span>{file.name}</span>
+                      <aside>
+                        <span>{convertBytesToKB(file.size)} kb</span>
+                        <i
+                          className="bi bi-archive-fill "
+                          onClick={() => removeFile(id)}
+                        ></i>
+                      </aside>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </>
   );
-}
+};
+
+export default FileUpload;

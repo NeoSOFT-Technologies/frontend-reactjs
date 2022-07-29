@@ -1,20 +1,19 @@
-.button {
-    padding: 15px 25px;
-    font-size: 14px;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-    color: #fff;
-    background-color: #141314;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 5px #999;
-  }
-  
-  .button:hover {background-color: #3e8e41}
-  
-  .button:active {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-  }
+.img-row {
+  display: inline-block;
+ 
+}
+.heading {
+  padding: 15px;
+  color: brown;
+  font-weight: 700;
+  font-size: 25px;
+}
+.btn {
+  background-color: blueviolet;
+  color: aliceblue;
+}
+i{
+  background-color: rgb(226, 43, 83);
+  color: rgb(255, 240, 246);
+  size: 20px;
+}
