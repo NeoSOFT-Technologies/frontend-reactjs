@@ -63,14 +63,14 @@ export default class HttpClient {
   }
 
   public static patch(url: string, payload: any): any {
-    return this.client().post(url, payload);
+    return this.client().patch(url, payload);
   }
 
   public static put(url: string, payload: any): any {
-    return this.client().post(url, payload);
+    return this.client().put(url, payload);
   }
 
   public static delete(url: string): any {
-    return this.client().post(url);
+    return this.client().delete(url);
   }
 }
