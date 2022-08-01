@@ -50,7 +50,7 @@ const FileUpload = ({
   };
 
   const handleNewFileUpload = async (e: { target: { files: File[] } }) => {
-    const { files: newFiles } = e.target;
+    const newFiles = e.target.files;
 
     // eslint-disable-next-line unicorn/explicit-length-check
     if (newFiles.length) {
