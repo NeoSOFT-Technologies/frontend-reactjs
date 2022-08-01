@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FileUpload from "../../components/file-uploader/FileUploader";
+import FileUpload from "../../components/file-upload/FileUpload";
 import FileUploaderHttpClient from "../../services/file-uploader/file-uploader";
 import "./FileUploader.css";
 const FileUploader = () => {
