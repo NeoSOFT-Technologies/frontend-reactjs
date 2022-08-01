@@ -32,14 +32,14 @@ const FileUpload = ({
     updateFilesCb(filesAsArray);
   };
 
-  const addNewFile = async (newFile: File) => {
+  const adduploadedFile = async (uploadedFile: File) => {
     let selectedFiles: { fileId: number; file: File }[] = [];
-    if (newFile.size < maxFileSizeInBytes) {
+    if (uploadedFile.size < maxFileSizeInBytes) {
       if (!otherProps.multiple) {
-        selectedFiles = [{ fileId, file: newFile }];
+        selectedFiles = [{ fileId, file: uploadedFile }];
       } else {
-        const newFileData = { fileId, file: newFile };
-        selectedFiles = [...files, newFileData];
+        const uploadedFileData = { fileId, file: uploadedFile };
+        selectedFiles = [...files, uploadedFileData];
         setFileId(fileId + 1);
       }
       setFiles(() => {
@@ -49,12 +49,12 @@ const FileUpload = ({
     }
   };
 
-  const handleNewFileUpload = async (e: { target: { files: File[] } }) => {
-    const newFiles = e.target.files;
+  const handleuploadedFileUpload = async (e: { target: { files: File[] } }) => {
+    const uploadedFile = e.target.files;
 
     // eslint-disable-next-line unicorn/explicit-length-check
-    if (newFiles.length) {
-      await addNewFile(newFiles[0]);
+    if (uploadedFile.length) {
+      await adduploadedFile(uploadedFile[0]);
     }
   };
 
@@ -81,7 +81,7 @@ const FileUpload = ({
         <input
           type="file"
           ref={fileInputField}
-          onChange={handleNewFileUpload}
+          onChange={handleuploadedFileUpload}
           data-testid="file-input"
           title=""
           value=""
