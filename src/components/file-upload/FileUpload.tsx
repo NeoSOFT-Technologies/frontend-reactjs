@@ -67,9 +67,6 @@ const FileUpload = ({
     // eslint-disable-next-line no-console
     console.log(response);
   };
-  const imageUrl = (file: File) => {
-    return URL.createObjectURL(file);
-  };
 
   return (
     <>
@@ -102,26 +99,10 @@ const FileUpload = ({
             {files.map((fileObj) => {
               const id = fileObj.fileId;
               const file = fileObj.file;
-              const isImageFile = file.type.split("/")[0] === "image";
 
               return (
                 <div key={id} className="img-row">
                   <div>
-                    {isImageFile &&
-                      (file.type === "image/jpeg" ||
-                        file.type === "image/png" ||
-                        file.type === "image/jpeg") && (
-                        <img
-                          src={imageUrl(file)}
-                          alt={`file preview ${file.name}`}
-                          height={150}
-                          width={150}
-                        />
-                      )}
-                    {(file.type === "text/plain" ||
-                      file.type === "application/pdf") && (
-                      <i className="bi bi-file-earmark-text type"></i>
-                    )}
                     <div>
                       <span>{file.name}</span>
                       <aside>

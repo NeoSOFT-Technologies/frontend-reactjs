@@ -1,5 +1,7 @@
 .img-row {
   display: inline-block;
+  margin: 5px;
+  padding: 5px;
  
 }
 .heading {
