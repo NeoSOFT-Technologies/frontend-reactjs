@@ -77,11 +77,16 @@ const FileUpload = ({
           type="file"
           ref={fileInputField}
           onChange={handleNewFileUpload}
+          data-testid="file-input"
           title=""
           value=""
           {...otherProps}
         />
-        <button type="submit" onClick={onSubmit || handleSubmit}>
+        <button
+          type="submit"
+          onClick={onSubmit || handleSubmit}
+          data-testid="submit-btn"
+        >
           Submit
         </button>
       </div>
@@ -93,23 +98,32 @@ const FileUpload = ({
               const id = Object.keys(fileObj)[0];
               const file = Object.values(fileObj)[0];
               const isImageFile = file.type.split("/")[0] === "image";
+              console.log(file);
               return (
                 <div key={id} className="img-row">
                   <div>
-                    {isImageFile && (
-                      <img
-                        src={URL.createObjectURL(file)}
-                        alt={`file preview ${file.name}`}
-                        height={150}
-                        width={150}
-                      />
+                    {isImageFile &&
+                      (file.type === "image/jpeg" ||
+                        file.type === "image/png" ||
+                        file.type === "image/jpeg") && (
+                        <img
+                          src={URL.createObjectURL(file)}
+                          alt={`file preview ${file.name}`}
+                          height={150}
+                          width={150}
+                        />
+                      )}
+                    {(file.type === "text/plain" ||
+                      file.type === "application/pdf") && (
+                      <i className="bi bi-file-earmark-text type"></i>
                     )}
                     <div>
                       <span>{file.name}</span>
                       <aside>
                         <span>{convertBytesToKB(file.size)} kb</span>
                         <i
-                          className="bi bi-archive-fill "
+                          className="bi bi-x-circle "
+                          data-testid="remove-btn"
                           onClick={() => removeFile(id)}
                         ></i>
                       </aside>

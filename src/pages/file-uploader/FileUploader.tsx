@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import FileUpload from "../../components/file-uploader/FileUploader";
 import FileUploaderHttpClient from "../../services/file-uploader/file-uploader";
-
-const Abc = () => {
+import "./FileUploader.css";
+const FileUploader = () => {
   const [newUserInfo, setNewUserInfo] = useState<{ [T: number]: File }[]>([]);
 
   const convertNestedObjectToArray = (nestedObj: { [T: number]: File }[]) =>
@@ -20,17 +20,19 @@ const Abc = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form className="file" onSubmit={handleSubmit}>
         <FileUpload
           accept=".jpg,.png,.jpeg,.txt,.pdf"
           label="File-Uploader"
+          data-testid="file-input"
           multiple
           updateFilesCb={updateUploadedFiles}
           onSubmit={handleSubmit}
+          className="fileUploader"
         />
       </form>
     </div>
   );
 };
 
-export default Abc;
+export default FileUploader;
