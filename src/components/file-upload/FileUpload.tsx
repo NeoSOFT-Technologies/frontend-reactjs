@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import FileUploaderHttpClient from "../../services/file-uploader/file-uploader";
+import { removeicon } from "../../resources/constants";
 import "./FileUpload.css";
 
 const KILO_BYTES_PER_BYTE = 1000;
@@ -17,27 +18,29 @@ const FileUpload = ({
   ...otherProps
 }: any) => {
   const fileInputField = useRef();
-  const [files, setFiles] = useState<{ [T: number]: File }[]>([]);
-  const [keys, setKeys] = useState(0);
+  const [files, setFiles] = useState<{ fileId: number; file: File }[]>([]);
+  const [fileId, setFileId] = useState(0);
 
-  const convertNestedObjectToArray = (nestedObj: { [T: number]: File }[]) =>
-    nestedObj.map((fileObj) => Object.values(fileObj)[0]);
+  const convertNestedObjectToArray = (
+    nestedObj: { fileId: number; file: File }[]
+  ) => nestedObj.map((fileObj) => fileObj.file);
 
-  const callUpdateFilesCb = (selectedFiles: { [T: number]: File }[]) => {
-    console.log(selectedFiles);
+  const callUpdateFilesCb = (
+    selectedFiles: { fileId: number; file: File }[]
+  ) => {
     const filesAsArray = convertNestedObjectToArray(selectedFiles);
     updateFilesCb(filesAsArray);
   };
 
   const addNewFile = async (newFile: File) => {
-    let selectedFiles: { [T: number]: File }[] = [];
+    let selectedFiles: { fileId: number; file: File }[] = [];
     if (newFile.size < maxFileSizeInBytes) {
       if (!otherProps.multiple) {
-        selectedFiles = [{ 0: newFile }];
+        selectedFiles = [{ fileId, file: newFile }];
       } else {
-        const newFileData = { keys: newFile };
+        const newFileData = { fileId, file: newFile };
         selectedFiles = [...files, newFileData];
-        setKeys(keys + 1);
+        setFileId(fileId + 1);
       }
       setFiles(() => {
         callUpdateFilesCb(selectedFiles);
@@ -45,24 +48,23 @@ const FileUpload = ({
       });
     }
   };
-  console.log(files);
 
-  const handleNewFileUpload = async (e: { target: { files: any } }) => {
+  const handleNewFileUpload = async (e: { target: { files: File[] } }) => {
     const { files: newFiles } = e.target;
 
-    if (newFiles.length > 0) {
+    // eslint-disable-next-line unicorn/explicit-length-check
+    if (newFiles.length) {
       await addNewFile(newFiles[0]);
     }
   };
 
-  const removeFile = (id: string) => {
-    setFiles((prevState) =>
-      prevState.filter((file) => Object.keys(file)[0] !== id)
-    );
+  const removeFile = (id: number) => {
+    setFiles((prevState) => prevState.filter((file) => file.fileId !== id));
   };
   const handleSubmit = async () => {
     const selectedFiles = convertNestedObjectToArray(files);
     const response = await FileUploaderHttpClient.FileUploader(selectedFiles);
+    // eslint-disable-next-line no-console
     console.log(response);
   };
 
@@ -95,10 +97,10 @@ const FileUpload = ({
         <div>
           <div>
             {files.map((fileObj) => {
-              const id = Object.keys(fileObj)[0];
-              const file = Object.values(fileObj)[0];
+              const id = fileObj.fileId;
+              const file = fileObj.file;
               const isImageFile = file.type.split("/")[0] === "image";
-              console.log(file);
+
               return (
                 <div key={id} className="img-row">
                   <div>
@@ -121,11 +123,13 @@ const FileUpload = ({
                       <span>{file.name}</span>
                       <aside>
                         <span>{convertBytesToKB(file.size)} kb</span>
-                        <i
-                          className="bi bi-x-circle "
-                          data-testid="remove-btn"
+                        <img
+                          src={removeicon}
+                          alt="logo"
+                          height={20}
+                          width={20}
                           onClick={() => removeFile(id)}
-                        ></i>
+                        />
                       </aside>
                     </div>
                   </div>

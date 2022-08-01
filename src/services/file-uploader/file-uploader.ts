@@ -6,22 +6,14 @@ export interface IFileUploadResponse {
 }
 
 export default class FileUploaderHttpClient {
-  /**
-   
+  private static FILE_UPLOAD_API = "URL";
 
-  /**
-   * @param payload
-   * @returns
-   */
   public static async FileUploader(
     payload: File[]
   ): Promise<IFileUploadResponse> {
     const {
       data: { id, status },
-    } = await HttpClient.post(
-      "http://localhost:8899/api/neostore/upload",
-      payload
-    );
+    } = await HttpClient.post(this.FILE_UPLOAD_API, payload);
     const response: IFileUploadResponse = {
       id,
       status,
