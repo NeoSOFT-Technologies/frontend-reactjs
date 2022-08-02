@@ -1,0 +1,20 @@
+.img-row {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px;
+ 
+}
+.heading {
+  padding: 15px;
+  color: brown;
+  font-weight: 700;
+  font-size: 25px;
+}
+.btn {
+  background-color: blueviolet;
+  color: aliceblue;
+}
+.type{
+  font-size: 80px
+  
+}
