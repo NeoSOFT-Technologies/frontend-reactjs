@@ -14,6 +14,7 @@ const FileUpload = ({
   updateFilesCb,
   maxFileSizeInBytes = DEFAULT_MAX_FILE_SIZE_IN_BYTES,
   allowedExtensions = DEFAULT_ALLOWED_EXTENSONS,
+  WrapperClassName,
 }: any) => {
   const [fileSelected, setFileSelected] = useState<File>();
 
@@ -40,11 +41,11 @@ const FileUpload = ({
   return (
     <>
       <div className="p-2 ">
-        <div className="heading wrapperstyle">{label}</div>
+        <div className="heading ">{label}</div>
 
         <input
           type="file"
-          className="inputstyle"
+          className={["inputfield", WrapperClassName].join(" ")}
           onChange={handleOnChange}
           data-testid="file-input"
           title=""
