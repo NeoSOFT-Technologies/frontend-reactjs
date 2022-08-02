@@ -1,13 +1,9 @@
-import React, { useState } from "react";
-
+import React from "react";
 import "./FileUpload.css";
 
-const KILO_BYTES_PER_BYTE = 1000;
 const DEFAULT_MAX_FILE_SIZE_IN_BYTES =
   process.env.REACT_APP_MAX_FILE_SIZE_IN_BYTES || 500_000;
 const DEFAULT_ALLOWED_EXTENSONS = ["jpg", "png", "jpeg", "pdf", "txt"];
-const convertBytesToKB = (bytes: number) =>
-  Math.round(bytes / KILO_BYTES_PER_BYTE);
 
 const FileUpload = ({
   label,
@@ -16,8 +12,6 @@ const FileUpload = ({
   allowedExtensions = DEFAULT_ALLOWED_EXTENSONS,
   WrapperClassName,
 }: any) => {
-  const [fileSelected, setFileSelected] = useState<File>();
-
   const addNewFile = async (newFile: File) => {
     const filetype = newFile.type.split("/")[1];
 
@@ -25,10 +19,7 @@ const FileUpload = ({
       newFile.size < maxFileSizeInBytes &&
       allowedExtensions.includes(filetype)
     ) {
-      setFileSelected(() => {
-        updateFilesCb(newFile);
-        return newFile;
-      });
+      updateFilesCb(newFile);
     }
   };
 
@@ -45,22 +36,12 @@ const FileUpload = ({
 
         <input
           type="file"
-          className={["inputfield", WrapperClassName].join(" ")}
+          className={`"inputfield", ${WrapperClassName}`}
           onChange={handleOnChange}
           data-testid="file-input"
           title=""
           value=""
         />
-      </div>
-
-      <div>
-        {fileSelected && (
-          <>
-            <span>{fileSelected.name}</span>
-
-            <div>{convertBytesToKB(fileSelected.size)} kb</div>
-          </>
-        )}
       </div>
     </>
   );
