@@ -21,9 +21,4 @@ it("checking the input fields", async () => {
   expect(fileBox).toHaveAttribute("type", "file");
   fireEvent.change(fileBox);
   fireEvent.change(fileBox, { target: { value: "" } });
-
-  const uploadBtn = screen.getByTestId("submit-btn");
-  expect(uploadBtn).toBeInTheDocument();
-  expect(uploadBtn).toHaveAttribute("type", "submit");
-  fireEvent.click(uploadBtn);
 });

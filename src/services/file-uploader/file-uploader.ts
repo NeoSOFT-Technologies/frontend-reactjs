@@ -9,7 +9,7 @@ export default class FileUploaderHttpClient {
   private static FILE_UPLOAD_API = "URL";
 
   public static async FileUploader(
-    payload: File[]
+    payload: File
   ): Promise<IFileUploadResponse> {
     const {
       data: { id, status },
