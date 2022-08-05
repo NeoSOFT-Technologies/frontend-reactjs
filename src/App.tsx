@@ -9,7 +9,6 @@ import { LoginPageState } from "./types/redux";
 import { RootState } from "./store";
 import Registration from "./pages/registration/Registration";
 import LanguageChange from "./components/i18n/LanguageChange";
-import { Helmet } from "react-helmet";
 
 import FileUploader from "./pages/file-uploader/FileUploader";
 function App() {
@@ -28,12 +27,6 @@ function App() {
 
   return (
     <div className="App">
-      <Helmet
-        titleTemplate="%s - React.ts Template"
-        defaultTitle="React.ts Template"
-      >
-        <meta name="description" content="A React.ts Template" />
-      </Helmet>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
