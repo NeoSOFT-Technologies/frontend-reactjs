@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Loader from "../../components/loader/Loader";
-import { ToastAlert } from "../../components/toast-alert/toast-alert";
+import ToastAlert from "../../components/toast-alert/toast-alert";
 import { useAppSelector } from "../../store/hooks";
 import { resetUserLogin } from "../../store/login/slice";
 import "./landing.css";
