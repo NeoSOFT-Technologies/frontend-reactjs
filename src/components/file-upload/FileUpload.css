@@ -2,7 +2,6 @@
   display: inline-block;
   margin: 5px;
   padding: 5px;
- 
 }
 .heading {
   padding: 15px;
@@ -14,7 +13,6 @@
   background-color: blueviolet;
   color: aliceblue;
 }
-.type{
-  font-size: 80px
-  
+.type {
+  font-size: 80px;
 }
