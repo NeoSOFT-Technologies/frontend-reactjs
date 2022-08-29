@@ -100,6 +100,29 @@ These variables will act as the defaults if the machine does not explicitly set 
  Defining environment variables for development, your CI and/or hosting platform will require these files defined as well.
 
 Please refer to the [dotenv documentation](https://github.com/motdotla/dotenv) for more details.
+
+## Building the Application using Specific `.env` file.
+
+-`npm run build:dev` : Run this command to clean the current build files and Create a new build file using the `.env` file.
+-`npm run build:staging`: Run this command to clean the current build files and create a new build file using the `.env.staging` file
+
+To target a specific build file Follow the given steps:-
+- lets suppose you want to create a build using `env.production`, add the proper script to the `package.json` file under`"scripts"`.
+- In our case the Key will look something like `build:production`.
+- Now in order to clear the exisiting build files we will add `npm run clean` to our value initially.
+- Following this you want to append the next command using `&&` as it inticates that after runninf=g the first command we can now execute the next command.
+- Next we need to cerate a `.env.production` file and add all the necessary environment variables.
+- After the Creation of `.env.production` file you need to add `env-cmd -f .env.production  react-scripts build` under `build:production` followed by the `&&` as prior mentioned what this will do is locate the `.env.production` file and use it to buildthe application.
+- After following through all the steps the script will look something like this:
+
+```json
+"scripts":{
+  "build:production":"npm run clean && env-cmd -f .env.production  react-scripts build"
+}
+```
+Congrats!!! you have successfully learnt how to Building an Application using specific `.env` file 
+
+
 ### variables used in the project
 PORT is used for running the application on the provided port
 REACT_APP_API_BASEURL it is used for setting the backend api base url
